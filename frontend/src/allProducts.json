@@ -1,0 +1,1761 @@
+[
+    {
+      "id": 1,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Absolute-Black-stonepedia.jpg",
+      "title": "Absolute Black",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 4.9
+    },
+    {
+      "id": 2,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Agaria-White-Marble-01-.png",
+      "title": "Agaria White",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 3,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/agra-red-sandstone-01-.png",
+      "title": "Agra Red Sandstone",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 4,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Alaska-Gold-Granite-01-.png",
+      "title": "Alaska Gold",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 5,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Alaska-Red-Granite-.png",
+      "title": "Alaska Red",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 6,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Alaska-White-Granite-01-.png",
+      "title": "Alaska White",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 3.2
+    },
+    {
+      "id": 7,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/amazon-green-quartzite-01-.png",
+      "title": "Amazon Green Quartzite",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 8,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Amazonite-Marble-01-.png",
+      "title": "Amazonite Marble",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 9,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/ambaji-white-01-.png",
+      "title": "Ambaji White",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 10,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Apple-Green-01-.png",
+      "title": "Apple Green",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 11,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Armani-Black-Marble-01-.png",
+      "title": "Armani Black",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 4.6
+    },
+    {
+      "id": 12,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Armani-Brown-Marble-01-.png",
+      "title": "Armani Brown",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 13,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Armani-Grey-Marble-01-1-1.png",
+      "title": "Armani Grey",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 14,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/autumn-brown-sandstone-01-.png",
+      "title": "Autumn Brown Sandstone",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 15,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Autumn-Brown-Travertine-01-.png",
+      "title": "Autumn Brown Travertine",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 16,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Autumn-Yellow-Marble-01-.png",
+      "title": "Autumn Yellow",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 3.2
+    },
+
+    {
+      "id": 17,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Azul-Bahia-01-.png",
+      "title": "Azul Bahia",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 18,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Azul-Nova-Granite-01-.png",
+      "title": "Azul Nova Granite",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 19,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Baltic-Brown-Granite-01-.png",
+      "title": "Baltic Brown Granite",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 20,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Baltic-Crocodile-Marble-01-.png",
+      "title": "Baltic Crocodile",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 21,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Baltic-Sea-Wave-Marble-01-.png",
+      "title": "Baltic Sea Wave",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 4.6
+    },
+    {
+      "id": 22,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Banswara-White-Marble-01-.png",
+      "title": "Banswara White",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 23,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Beige-Onyx-slab-01-.png",
+      "title": "Beige Onyx Slab",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 24,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/beige-sandstone-01-.png",
+      "title": "Beige Sandstone",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 25,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Beige-Serpeggian-Marble-01-.png",
+      "title": "Beige Serpeggian",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 26,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Beige-Travertine-01-.png",
+      "title": "Beige Travertine",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 3.2
+    },
+    {
+      "id": 27,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Bianco-Marble-01-.png",
+      "title": "Bianco",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 28,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Bijolia-Stone-Sandstone-Custom.jpeg",
+      "title": "Bijolia Stone Sandstone",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 29,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Black-Forest-Marble-01-.png",
+      "title": "Black Forest",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 30,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Black-Galaxy-Granite-01-.png",
+      "title": "Black Galaxy Granite",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 31,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Black-Lighting-Quartzite-01-.png",
+      "title": "Black Lighting Quartzite",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 32,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Black-Marinace-Natural-Mosiac-01-.png",
+      "title": "Black Marinace Natural Mosiac",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+
+    {
+      "id": 33,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Black-Marquina-Marble-01-.png",
+      "title": "Black Marquina",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 4.9
+    },
+    {
+      "id": 34,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Black-Marquina-Granite-01-.png",
+      "title": "Black Marquina Granite",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 35,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Black-Onyx-01-.png",
+      "title": "Black Onyx slab",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 36,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Black-Pearl-Granite-01-.png",
+      "title": "Black Pearl Granite",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 37,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Black-Tauras-01-.png",
+      "title": "Black Tauras",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 38,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Blue-Dunes-Granite-01-1-1.png",
+      "title": "Blue Dunes Granite",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 3.2
+    },
+    {
+      "id": 39,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Blue-Ocean-Onyx-slab-01-.png",
+      "title": "Blue Onyx slab",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 40,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Blue-pearl-01-1-1.png",
+      "title": "Blue pearl",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 41,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/blue-sky-quartzite-01-.png",
+      "title": "Blue Sky Quartzite",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 4.9
+    },
+    {
+      "id": 42,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Botticino-Marble-01-.png",
+      "title": "Botticino",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 43,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Brazil-Brown-01-.png",
+      "title": "Brazil Brown",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 44,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/brown-onyx-slab-01-.png",
+      "title": "Brown Onyx slab",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 45,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Buttterfly-Green-01-.png",
+      "title": "Buttterfly Green",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 46,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Calacatta-Gold-Marble-01-.png",
+      "title": "Calacatta Gold",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 3.2
+    },
+    {
+      "id": 47,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Cappuccino-Onyx-slab-01-.png",
+      "title": "Cappuccino Onyx slab",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 48,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Carnelian-Onyx-slab-01-.png",
+      "title": "Carnelian Onyx slab",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 49,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Carrara-White-Marble-01-.png",
+      "title": "Carrara White",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 3.2
+    },
+    {
+      "id": 50,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Cats-Eye-Granite-01-.png",
+      "title": "Cat Eye",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 51,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Cera-Grey-Granite-01-.png",
+      "title": "Cera Grey",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 4.9
+    },
+    {
+      "id": 52,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Cheema-Blue-01-.png",
+      "title": "Cheema Blue",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 53,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/chiaro-travertine-01-.png",
+      "title": "Chiaro Travertine",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 54,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Chiku-Pearl-01-.png",
+      "title": "Chiku Pearl",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 55,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/chima-pink-granite-Custom.jpg",
+      "title": "Chima Pink",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 56,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/China-White-01-.png",
+      "title": "China White",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 3.2
+    },
+    {
+      "id": 57,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/chocolate-sandstone-01-.png",
+      "title": "Chocolate Sandstone",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 58,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/classic-roman-travertine-01-.png",
+      "title": "Classic Roman Travertine",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 59,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/classic-travertine-01-.png",
+      "title": "Classic Travertine",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 60,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Coffee-Brown-Granite-01-.png",
+      "title": "Coffee Brown",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 61,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Coin-Black-Granite-01-.png",
+      "title": "Coin Black",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 4.9
+    },
+    {
+      "id": 62,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Copper-Canyon-Quartzite-01-.png",
+      "title": "Copper Canyon Quartzite",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 63,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Crema-Marfil-Marble-01-.png",
+      "title": "Crema Marfil",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 64,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Crystal-Blue-Granite-01-1-1.png",
+      "title": "Crystal Blue Granite",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 65,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/crystal-onyx-slab-01-.png",
+      "title": "Crystal Onyx slab",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 66,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Crystal-Yellow-Granite-01-.png",
+      "title": "Crystal Yellow",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 67,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Dark-Green-Onyx-slab-01-.png",
+      "title": "Dark Green Onyx slab",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 68,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Desert-Brown-Granite-01-Custom.png",
+      "title": "Desert Brown",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 69,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Devda-green-granite-01-.png",
+      "title": "Devnagri Granite",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 70,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Dholpur-Beige-Limestone-01-.png",
+      "title": "Dholpur Beige",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 71,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Dholpur-Chocolate-Sandstone-Custom.jpeg",
+      "title": "Dholpur Chocolate Sandstone",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 4.9
+    },
+    {
+      "id": 72,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/dholpur-pink-sandstone-01-.png",
+      "title": "Dholpur Pink Sandstone",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 73,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Dholpur-Red-Limestone-01-.png",
+      "title": "Dholpur Red",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 74,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Dyna-Marble-01-.png",
+      "title": "Dyna",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 75,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Emerald-Green-Onyx-slab-01-.png",
+      "title": "Emerald Green Onyx slab",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 76,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Emerald-Pearl-01-.png",
+      "title": "Emerald Pearl",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 77,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Emperador-Dark-Marble-01-.png",
+      "title": "Emperador Dark",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 78,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/fantastico-travertine-01-.png",
+      "title": "Fantastico Travertine",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 79,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Moon-White-Granite-01-1-1.png",
+      "title": "Fantasy Brown",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 80,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Fire-Red-Onyx-slab-01-.png",
+      "title": "Fire Red Onyx slab",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 81,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/flower-gold-Limestone-01-.png",
+      "title": "Flower gold",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 4.9
+    },
+    {
+      "id": 82,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Forest-Black-01-.png",
+      "title": "Forest Black",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 83,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Forest-Green-Marble-01-.png",
+      "title": "Forest Green",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 84,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/G-20-Granite-01-.png",
+      "title": "G 20 Granite",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 85,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/GD-Brown-01-.png",
+      "title": "GD Brown",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 86,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Gem-Red-Granite-01-.png",
+      "title": "Gem Red",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 87,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Giallo-California-01-.png",
+      "title": "Giallo California",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 88,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Giallo-Topazio-01-.png",
+      "title": "Giallo Topazio",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 89,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/gold-quartzite-01-.png",
+      "title": "Gold Quartzite",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 90,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Yellow-Travertine-01-1-1.png",
+      "title": "Gold Travertine",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 4.9
+    },
+    {
+      "id": 91,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Golden-Calacatta-Marble-01-.png",
+      "title": "Golden Calacatta",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 92,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Golden-Onyx-slab-01-.png",
+      "title": "Golden Onyx slab",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 93,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Golden-Portoro-Marble-01-.png",
+      "title": "Golden Portoro",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 94,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/natural-Golden-Sparkle-Quartzite-slab-01-.png",
+      "title": "Golden Sparkle Quartzite",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 95,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Golden-Spider-Marble-01-.png",
+      "title": "Golden Spider",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 96,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/green-onyx-slab-01-.png",
+      "title": "Green Onyx slab",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 97,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Grey-Flurry-Marble-01-.png",
+      "title": "Grey Flurry",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 98,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Grey-Laurent-Marble-.png",
+      "title": "Grey Laurent",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 99,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Grey-Orobico-Marble-01-.png",
+      "title": "Grey Orobico",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 100,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Gwalior-Mint-Limestone-01-.png",
+      "title": "Gwalior Mint",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 101,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Gwalior-Mint-Sandstone-Custom.jpeg",
+      "title": "Gwalior Mint Sandstone",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 102,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Hassan-Green-Granite-01-.png",
+      "title": "Hassan Green",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 103,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Honey-Onyx-slab-01-.png",
+      "title": "Honey Onyx slab",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 104,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Ice-Blue-Granite-01-.png",
+      "title": "Ice Blue Granite",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 105,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Iceberg-Marble-01-.png",
+      "title": "Iceberg",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 106,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Imperial-Red-Granite-01-Custom.png",
+      "title": "Imperial Red",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 107,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Imperial-White-Granite-01-.png",
+      "title": "Imperial White Granite",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 108,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Indian-Rose-Quartzite-01-.png",
+      "title": "Indian Rose Quartzite",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 109,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Italian-Statuario-Marble-01-.png",
+      "title": "Italian Statuario",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 110,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Ivory-Fantasy-Granit-01-Custom.png",
+      "title": "Ivory Fantasy",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 111,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/ivory-onyx-slab-01-.png",
+      "title": "Ivory Onyx slab",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 112,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Ivory-travertine.jpg",
+      "title": "Ivory Travertine",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 113,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/jaisalmer-yellow-limestone-01-.png",
+      "title": "Jaisalmer Yellow",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 114,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/jaisalmer-yellow-sandstone-01-.png",
+      "title": "Jaisalmer Yellow Sandstone",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 115,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Jet-Black-Granite-01-.png",
+      "title": "Jet Black Granite",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 116,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Jhansi-Red-Granite-02-01-.png",
+      "title": "Jhashi Red",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 117,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Jodhpur-Pink-Sandstone-01-.png",
+      "title": "Jodhpur Pink Sandstone",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 118,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/kaddapah-black-limestone-01-.png",
+      "title": "Kaddapah Black",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 119,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Kandla-Grey-Sandstone-01-.png",
+      "title": "Kandla Grey Sandstone",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 120,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Kashmir-White-Granite-01-Custom.png",
+      "title": "Kashmir White",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 121,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Katni-Marble-01-.png",
+      "title": "Katni",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 122,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Kota-Blue-Limestone-01-.png",
+      "title": "Kota Blue",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 123,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Kota-Brown-Limestone-01-.png",
+      "title": "Kota Brown",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 124,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Kota-Brown-Sandstone-01-.png",
+      "title": "Kota Brown Sandstone",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 125,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Kuppam-Green-Granite-01-.png",
+      "title": "Kuppam Green Granite",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 126,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/kurnool-grey-limestone-01-.png",
+      "title": "Kurnool Grey",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 127,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Labrador-Antique-01-.png",
+      "title": "Labrador Antique",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 128,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Lakha-Red-Granite-01-Custom.png",
+      "title": "Lakha Red",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 129,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Lalitpur-Grey-Limestone-01-.png",
+      "title": "Lalitpur Grey",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 130,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Lalitpur-Grey-Sandstone-Custom.jpg",
+      "title": "Lalitpur Grey Sandstone",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 131,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Lavender-Blue-Granite-01-.png",
+      "title": "Lavander Blue",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 132,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Light-Emperador-Marble-01-.png",
+      "title": "Light Emperador",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 133,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Maharaja-White-Quartzite-01-.png",
+      "title": "Maharajah White Quartzite",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 134,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Majestic-Black-Granite-01-.png",
+      "title": "Majestic Black",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+
+    {
+      "id": 135,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Makrana-White-Marble-01-.png",
+      "title": "Makrana White",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 136,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Mandana-red-Custom.jpg",
+      "title": "Mandana Red Quartzite",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 137,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Mandana-Red-Sandstone-01-.png",
+      "title": "Mandana Red Sandstone",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 138,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Michelangelo-Marble-01-.png",
+      "title": "Michelangelo",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 139,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/mint-fossil-sandstone-01-.png",
+      "title": "Mint Fossil Sandstone",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },    
+    {
+      "id": 140,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/mint-white-sandstone-01-.png",
+      "title": "Mint White Sandstone",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 141,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/modak-sandstone-01-01-.png",
+      "title": "Modak Sandstone",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 142,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Moon-White-Granite-01-.png",
+      "title": "Moon White",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 143,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/morwad-fantastic-grey-01-.png",
+      "title": "Morwad white",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 144,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Multi-color-Onyx-slab-01-.png",
+      "title": "Multi-color Onyx slab",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 145,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Mystique-Grey-Travertine-01-.png",
+      "title": "Mystique Grey Travertine",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 146,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Navona-Travertine-01-.png",
+      "title": "Navona Travertine",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 147,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Nero-Portoro-Marble-01-.png",
+      "title": "Nero Portoro",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 148,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/nizarna-white-01-.png",
+      "title": "Nizarna  white",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 149,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Noche-Travertine-01-.png",
+      "title": "Noche Travertine",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 150,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Norway-Blue-01-.png",
+      "title": "Norway Blue",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 151,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/ocean-blue-travertine-01-.png",
+      "title": "Ocean Blue Travertine",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 152,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Onyx-Alabaster-slab-01-.png",
+      "title": "Onyx Alabaster slab",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 153,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Opal-Quartzite-01-.png",
+      "title": "Opal Quartzite",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 154,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/orange-onyx-slab-01-.png",
+      "title": "Orange Onyx slab",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 155,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/p3nAotOAIc-Custom.jpg",
+      "title": "Oyster Grey Quartzite",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 156,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Blue-pearl-01-.png",
+      "title": "P Blue",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 157,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/P-White-Granite-01-.png",
+      "title": "P White",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 158,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Palissandro-Blue-Marble-01-.png",
+      "title": "Palissandro Blue",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 159,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Paloda-Brown-Custom.jpg",
+      "title": "Paloda Brown Sandstone",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 160,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Panda-White-01-.png",
+      "title": "Panda White",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 161,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Paradiso-CLASSICO-Granite-01-.png",
+      "title": "Paradiso Granite",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 162,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/peacock-green-QuartzUpdated.jpg",
+      "title": "Peacock Green Quartzite",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 163,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Black-Pearl-.png",
+      "title": "Pearl Black",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 164,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/pink-cristallo-quartzite-01-.png",
+      "title": "Pink Cristallo Quartzite",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 165,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/pink-onyx-slab-01-.png",
+      "title": "Pink Onyx slab",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 166,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/purple-onyx-slab-01-.png",
+      "title": "Purple Onyx slab",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 167,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/74-studio-cover-kitchen-Custom.jpg",
+      "title": "Rainforest Gold Quartzite",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 168,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Rainforest-Green-Marble-01-.png",
+      "title": "Rainforest Green",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 169,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/raj-nagar-white-01-.png",
+      "title": "Raj Nagar White",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 170,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Rajasthan-Black-Granite-01-Custom.png",
+      "title": "Rajasthan Black",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 171,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Rajasthan-Green-Sandstone-01-.png",
+      "title": "Rajasthan Green Sandstone",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 172,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Rajpura-Sandstone-Custom.jpg",
+      "title": "Rajpura Sandstone",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 173,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/raveena-sandstone-01-.png",
+      "title": "Raveena Sandstone",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 174,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Red-Onyx-slab-01-.png",
+      "title": "Red Onyx slab",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+
+    {
+      "id": 175,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Red-Travertine-01-.png",
+      "title": "Red Travertine",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 176,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/River-Blue-Granite-01-.png",
+      "title": "River Blue Granite",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 177,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Rosa-Twilight-Quartzite-01-.png",
+      "title": "Rosa Twilight Quartzite",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 178,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Rosso-Alicante-Marble-01-.png",
+      "title": "Rosso Alicante",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 179,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Rosso-Levanto-Marble-01-.png",
+      "title": "Rosso Levanto",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },    
+    {
+      "id": 180,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Rosy-Pink-Granite-01-Custom.png",
+      "title": "Rosy Pink",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 181,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/S-white-01-.png",
+      "title": "S white",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 182,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Sadar-Ali-Granite-01-.png",
+      "title": "Sadar Ali",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 183,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Sagar-Black-Sandstone-Custom.jpeg",
+      "title": "Sagar Black Sandstone",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 184,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Sahara-Noir-Marble-01-.png",
+      "title": "Sahara Noir",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 185,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/scabas-travertine-01-.png",
+      "title": "Scabas Travertine",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 186,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Shahabad-Limestone-01-.png",
+      "title": "Shahabad",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 187,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Shahabad-Grey-Sandstone-01-.png",
+      "title": "Shahabad Grey Sandstone",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 188,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Shiva-Gold-Granite-01-.png",
+      "title": "Shiva Gold Granite",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 189,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Silver-Sparkle-01-.png",
+      "title": "Silver Sparkle",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 190,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/silver-travertine-01-.png",
+      "title": "Silver Travertine",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 191,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Silver-Wave-Marble-01-.png",
+      "title": "Silver Wave",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 192,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Sira-Grey-Granite-01-.png",
+      "title": "Sira Grey",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 193,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Snow-White-Granite-01-.png",
+      "title": "Snow White Granite",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 194,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Spider-Green-Marble-01-.png",
+      "title": "Spider Green",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+    {
+      "id": 195,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Statuario-Venato-Marble-01-.png",
+      "title": "Statuario Venato",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 196,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Steel-Grey-Granite-01-2048x2048.png",
+      "title": "Steel Grey",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 197,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Tan-Brown-Granite.jpg",
+      "title": "Tan Brown",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 198,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/tandoor-blue-Limestone-01-.png",
+      "title": "Tandor blue",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 199,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Tandur-Grey-Limestone-01-.png",
+      "title": "Tandur Grey",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 200,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Tandur-Grey-Sandstone-01-.png",
+      "title": "Tandur Grey Sandstone",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 201,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/tandur-yellow-limestone-01-.png",
+      "title": "Tandur Yellow",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 202,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Tandur-Yellow-Sandstone-01-.png",
+      "title": "Tandur Yellow Sandstone",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 203,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/teakwood-sandstone-01-.png",
+      "title": "Teakwood Sandstone",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 204,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Tiger-Skin-Granite-01-.png",
+      "title": "Tiger Skin",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+
+    {
+      "id": 205,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Titanium-Granite-01-.png",
+      "title": "Titanium Granite",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 206,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Toscano-Beige-Travertine-01-.png",
+      "title": "Toscano Beige Travertine",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 207,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Tundra-Grey-Marble-01-1-1.png",
+      "title": "Tundra Grey Marble",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 208,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Udaipur-Green-Marble-01-.png",
+      "title": "Udaipur Green",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 209,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Verde-Peacock-Quartzite-01-.png",
+      "title": "Verde Peacock Quartzite",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },    
+    {
+      "id": 210,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Volga-Blue-01-.png",
+      "title": "Volga Blue ",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 3.6
+    },
+    {
+      "id": 211,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/walnut-travertine-01-.png",
+      "title": "Walnut Travertine",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 3.8
+    },
+    {
+      "id": 212,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/White-Galaxy-Granite-Custom.jpg",
+      "title": "White Galaxy Granite",
+      "shopBy": "Pink Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 213,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/White-Onyx-slab-01-.png",
+      "title": "White Onyx slab",
+      "shopBy": "Granite",
+      "price": 300,
+      "rating": 1.6
+    },
+    {
+      "id": 214,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/White-Travertine-01-.png",
+      "title": "White Stone",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 4.8
+    },
+
+    {
+      "id": 215,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Yellow-Onyx-slab-01-.png",
+      "title": "Yellow Onyx slab",
+      "shopBy": "Marble",
+      "price": 150,
+      "rating": 1.8
+    },
+    {
+      "id": 216,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Yellow-Siena-Marble-01-.png",
+      "title": "Yellow Siena",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 217,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Yellow-Travertine-01-.png",
+      "title": "Yellow Travertine",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 218,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Z-Brown-Granite-01-.png",
+      "title": "Z Brown Granite",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    },
+    {
+      "id": 219,
+      "image": "https://stonepedia.in/wp-content/uploads/2024/10/Zebrino-Marble-01-.png",
+      "title": "Zebrino",
+      "shopBy": "Sandstone",
+      "price": 95,
+      "rating": 2.2
+    }
+  ]
+  
