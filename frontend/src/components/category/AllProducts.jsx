@@ -14,7 +14,7 @@ const AllProducts = () => {
   const [itemsPerPage, setItemsPerPage] = useState(8);
   const [allProducts, setAllProducts] = useState([]);
   const navigate = useNavigate()
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   // Fetch data from Firestore
   useEffect(() => {
@@ -27,7 +27,7 @@ const AllProducts = () => {
         }));
         // console.log(products)
         setAllProducts(products);
-        // setLoading(false);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching products: ", error);
       }
@@ -162,9 +162,11 @@ const AllProducts = () => {
     return pages;
   };
 
-  // if (loading) {
-  //   return <p>Loading products...</p>;
-  // }
+  if (loading) {
+    return <div className="h-screen w-full flex justify-center items-center">
+      <p className="text-white text-3xl font-bold ">Loading products...</p>
+    </div>;
+  }
 
   return (
     <div className="md:px-10 lg:px-16 lg:py-5 xl:px-20 2xl:px-32 px-5 md:flex gap-10 max-md:space-y-5">
@@ -210,11 +212,12 @@ const AllProducts = () => {
             ))}
           </ul>
         ) : (
-          <div className="text-center">
-            <p className="text-gray-400">No Products Found</p>
+          <div className="flex flex-col items-center">
+            <img src="src/assets/reject.png" alt="no-products-found-img" className="h-60"/>
+            <p className="text-gray-100 text-2xl">No Products Found</p>
           </div>
         )}
-        <div className="flex justify-center items-center gap-2 py-3">
+        {paginatedProducts.length > 0 && <div className="flex justify-center items-center gap-2 py-3">
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
@@ -240,7 +243,8 @@ const AllProducts = () => {
           >
             <FaAngleDoubleRight size={20} />
           </button>
-        </div>
+        </div>}
+        
       </div>
     </div>
   );

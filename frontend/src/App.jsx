@@ -16,6 +16,7 @@ import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
 import BecomeASupplier from "./components/navbar/BecomeASupplier";
 import ProductDetails from "./components/category/ProductDetails";
 import Cart from "./components/Cart";
+import { CartProvider } from "./components/context/CartContext";
 
 const AppWrapper = () => {
   const location = useLocation();
@@ -85,7 +86,7 @@ const AppWrapper = () => {
             </ProtectedRoute>
           }
         />
-        
+
         <Route
           path="/admin"
           element={
@@ -101,9 +102,11 @@ const AppWrapper = () => {
 
 function App() {
   return (
-    <Router>
-      <AppWrapper />
-    </Router>
+    <CartProvider>
+      <Router>
+        <AppWrapper />
+      </Router>
+    </CartProvider>
   );
 }
 

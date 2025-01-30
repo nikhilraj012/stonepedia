@@ -4,11 +4,13 @@ import { FaSquareFacebook } from "react-icons/fa6";
 import { IoLogoTwitter } from "react-icons/io5";
 import { FaGooglePlus } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io5";
+import { useCart } from "../context/CartContext";
 
-const EachDetail = ({ product, addToCart }) => {
+const EachDetail = ({ product}) => {
   const [value, setvalue] = useState(6000);
   const [thickness, setThickness] = useState("");
   const [finish, setFinish] = useState("");
+  const { addToCart } = useCart();
 
   const handleIncrement = () => {
     setvalue((prevValue) => prevValue + 100);
@@ -34,6 +36,7 @@ const EachDetail = ({ product, addToCart }) => {
     };
 
     addToCart(cartItem);
+    console.log("Added to cart:", cartItem);
   };
 
   return (
