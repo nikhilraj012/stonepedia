@@ -102,14 +102,6 @@ const Cart = () => {
               ))}
             </ul>
 
-            {/* <div className="mt-8 flex justify-end">
-              <button
-                type="button"
-                className="border w-full bg-orange-500 font-bold p-2 rounded-lg text-white"
-              >
-                Checkout
-              </button>
-            </div> */}
             <div className=" mt-8 flex justify-end">
               <div className="space-y-1">
                 <h1 className="text-xl font-bold text-gray-600">
@@ -122,6 +114,7 @@ const Cart = () => {
                 <button
                   type="button"
                   className="border w-full bg-orange-500 font-bold p-2 rounded-lg text-white"
+                  onClick={() => navigate("/checkout")}
                 >
                   Checkout
                 </button>

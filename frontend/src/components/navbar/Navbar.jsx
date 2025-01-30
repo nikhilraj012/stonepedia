@@ -127,7 +127,7 @@ const Navbar = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 5 }}
               >
                 <a className="hover:text-orange-500 hover:underline underline-offset-4">
-                  CONTACT
+                  ORDERS
                 </a>
               </motion.li>
 

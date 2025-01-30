@@ -17,6 +17,7 @@ import BecomeASupplier from "./components/navbar/BecomeASupplier";
 import ProductDetails from "./components/category/ProductDetails";
 import Cart from "./components/Cart";
 import { CartProvider } from "./context/CartContext";
+import Checkout from "./components/Checkout";
 
 const AppWrapper = () => {
   const location = useLocation();
@@ -75,6 +76,14 @@ const AppWrapper = () => {
           element={
             <ProtectedRoute restricted={false}>
               <Cart />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/checkout"
+          element={
+            <ProtectedRoute restricted={false}>
+              <Checkout />
             </ProtectedRoute>
           }
         />
