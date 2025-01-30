@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import SubNavbar from "./SubNavbar";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase/firebase";
+import { useCart } from "../../context/CartContext";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,6 +15,7 @@ const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
   const location = useLocation();
   const userEmail = localStorage.getItem("userEmail");
+  const { cartItems } = useCart();
 
   const adminEmails = ["admin@stonepedia.com", "superuser@stonepedia.com"];
 
@@ -135,7 +137,7 @@ const Navbar = () => {
                     <BsCart3 size={20} />
                   </span>
                   <span className="absolute -top-4 px-1 py-0.5 -right-2 bg-orange-500 text-white text-xs font-bold rounded-full">
-                    0
+                    {cartItems.length}
                   </span>
                 </div>
               </Link>

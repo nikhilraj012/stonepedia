@@ -5,8 +5,9 @@ import { IoLogoTwitter } from "react-icons/io5";
 import { FaGooglePlus } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { useCart } from "../../context/CartContext";
+import { toast } from "react-toastify";
 
-const EachDetail = ({ product}) => {
+const EachDetail = ({ product }) => {
   const [value, setvalue] = useState(6000);
   const [thickness, setThickness] = useState("");
   const [finish, setFinish] = useState("");
@@ -21,8 +22,12 @@ const EachDetail = ({ product}) => {
   };
 
   const handleAddToCart = () => {
-    if(thickness === "" || finish === "") {
-      alert("Please select thickness and finish options!");
+    if (thickness === "" || finish === "") {
+      // alert("Please select thickness and finish options!");
+      toast.error("Select Thickness and Finish options!", {
+        position: "top-center",
+        autoClose: 2000,
+      });
       return;
     }
 
