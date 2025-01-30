@@ -4,7 +4,7 @@ import { FaSquareFacebook } from "react-icons/fa6";
 import { IoLogoTwitter } from "react-icons/io5";
 import { FaGooglePlus } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io5";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../../context/CartContext";
 
 const EachDetail = ({ product}) => {
   const [value, setvalue] = useState(6000);

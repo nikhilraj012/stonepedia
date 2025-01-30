@@ -16,7 +16,7 @@ import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
 import BecomeASupplier from "./components/navbar/BecomeASupplier";
 import ProductDetails from "./components/category/ProductDetails";
 import Cart from "./components/Cart";
-import { CartProvider } from "./components/context/CartContext";
+import { CartProvider } from "./context/CartContext";
 
 const AppWrapper = () => {
   const location = useLocation();

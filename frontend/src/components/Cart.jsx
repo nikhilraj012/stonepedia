@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 import { ImCancelCircle } from "react-icons/im";
 import { useNavigate } from "react-router-dom";
-import { useCart } from "../components/context/CartContext";
+import { useCart } from "../context/CartContext";
 
 const Cart = () => {
   const { cartItems, removeFromCart, clearCart, updateCartItemQuantity } =
