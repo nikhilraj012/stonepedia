@@ -46,9 +46,9 @@ const Navbar = () => {
       });
   };
 
-  const isNotHome = location.pathname !== "/";
+  const isNotHome = location.pathname !== "/" ;
   const isAdminOrSupplier =
-    adminEmails.includes(userEmail) || location.pathname === "/becomeSupplier";
+    adminEmails.includes(userEmail) || location.pathname === "/becomeSupplier" ;
 
   return (
     <div

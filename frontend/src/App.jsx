@@ -19,13 +19,14 @@ import Cart from "./components/Cart";
 import { CartProvider } from "./context/CartContext";
 import Checkout from "./components/Checkout";
 import Orders from "./components/Orders";
+import ForgotPassword from "./components/auth/ForgotPassword";
 
 const AppWrapper = () => {
   const location = useLocation();
 
   return (
     <div>
-      {location.pathname !== "/signup" && location.pathname !== "/login" && (
+      {location.pathname !== "/signup" && location.pathname !== "/login" && location.pathname !== "/password/reset" && (
         <Navbar />
       )}
 
@@ -47,6 +48,14 @@ const AppWrapper = () => {
               <Login />
             </ProtectedRoute>
           }
+        />
+        <Route
+        path="/password/reset"
+        element={
+          <ProtectedRoute restricted={true}>
+            <ForgotPassword />
+          </ProtectedRoute>
+        }
         />
         <Route
           path="/"
