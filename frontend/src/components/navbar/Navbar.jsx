@@ -54,7 +54,7 @@ const Navbar = () => {
     <div
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled || isNotHome || isHovered
-          ? "bg-white shadow-md"
+          ? "bg-gray-200 shadow-md"
           : "bg-transparent"
       }`}
     >
@@ -122,14 +122,17 @@ const Navbar = () => {
                   SERVICES
                 </a>
               </motion.li>
-              <motion.li
-                whileHover={{ y: -5 }}
-                transition={{ type: "spring", stiffness: 300, damping: 5 }}
-              >
-                <a className="hover:text-orange-500 hover:underline underline-offset-4 cursor-pointer">
-                  ORDERS
-                </a>
-              </motion.li>
+
+              <Link to="/orders">
+                <motion.li
+                  whileHover={{ y: -5 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 5 }}
+                >
+                  <a className="hover:text-orange-500 hover:underline underline-offset-4 cursor-pointer">
+                    ORDERS
+                  </a>
+                </motion.li>
+              </Link>
 
               <Link to="/cart">
                 <div className="relative inline-block cursor-pointer">

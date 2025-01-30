@@ -18,6 +18,7 @@ import ProductDetails from "./components/category/ProductDetails";
 import Cart from "./components/Cart";
 import { CartProvider } from "./context/CartContext";
 import Checkout from "./components/Checkout";
+import Orders from "./components/Orders";
 
 const AppWrapper = () => {
   const location = useLocation();
@@ -84,6 +85,14 @@ const AppWrapper = () => {
           element={
             <ProtectedRoute restricted={false}>
               <Checkout />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/orders"
+          element={
+            <ProtectedRoute restricted={false}>
+              <Orders />
             </ProtectedRoute>
           }
         />
