@@ -11,14 +11,17 @@ export const CartProvider = ({ children }) => {
     setCartItems((prevItems) => {
       const existingItem = prevItems.find((item) => item.id === product.id);
       if (existingItem) {
-        // alert("This product is already in your cart!");
         toast.error("This product is already in your cart!", {
           position: "bottom-center",
           autoClose: 2000,
         });
-        return prevItems; // Prevent duplicate addition
+        return prevItems;
       }
-      return [...prevItems, { ...product, value: 6000 }]; // Default quantity: 6000
+      toast.success("Added to cart!", {
+        position: "bottom-center",
+        autoClose: 2000,
+      });
+      return [...prevItems, { ...product, value: 6000 }];
     });
   };
 

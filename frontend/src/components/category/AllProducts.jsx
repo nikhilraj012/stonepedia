@@ -190,7 +190,7 @@ const AllProducts = () => {
             {paginatedProducts.map((product) => (
               <li
                 key={product.id}
-                onClick={()=> navigate(`/product-details/${product.id}`)}
+                onClick={()=> navigate(`/category/product-details/${product.id}`)}
                 className="border rounded-lg shadow-md hover:shadow-lg cursor-pointer bg-gray-900"
               >
                 <img

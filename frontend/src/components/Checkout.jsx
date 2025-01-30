@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 const Checkout = () => {
   const [countdown, setCountdown] = useState(10);
   const navigate = useNavigate();
+  const { clearCart } = useCart();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -11,6 +13,7 @@ const Checkout = () => {
     }, 1000);
 
     const redirectTimer = setTimeout(() => {
+      clearCart(); // Clear the cart after redirecting
       navigate("/"); // Redirect to home page after 60 seconds
     }, 10000);
 
@@ -32,7 +35,9 @@ const Checkout = () => {
         Our Executive will get back to you within next 24 hours.
       </h1>
       <p className="text-lg text-gray-400 mt-4">
-        Redirecting to home page in <span className="font-bold text-orange-500">{countdown}</span> seconds...
+        Redirecting to home page in{" "}
+        <span className="font-bold text-orange-500">{countdown}</span>{" "}
+        seconds...
       </p>
     </div>
   );

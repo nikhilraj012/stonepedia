@@ -101,7 +101,7 @@ const Navbar = () => {
                   whileHover={{ y: -5 }}
                   transition={{ type: "spring", stiffness: 300, damping: 5 }}
                 >
-                  <a className="hover:text-orange-500 hover:underline underline-offset-4">
+                  <a className="hover:text-orange-500 hover:underline underline-offset-4 cursor-pointer">
                     HOME
                   </a>
                 </motion.li>
@@ -110,7 +110,7 @@ const Navbar = () => {
                 whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 300, damping: 5 }}
               >
-                <a className="hover:text-orange-500 hover:underline underline-offset-4">
+                <a className="hover:text-orange-500 hover:underline underline-offset-4 cursor-pointer">
                   ABOUT US
                 </a>
               </motion.li>
@@ -118,7 +118,7 @@ const Navbar = () => {
                 whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 300, damping: 5 }}
               >
-                <a className="hover:text-orange-500 hover:underline underline-offset-4">
+                <a className="hover:text-orange-500 hover:underline underline-offset-4 cursor-pointer">
                   SERVICES
                 </a>
               </motion.li>
@@ -126,7 +126,7 @@ const Navbar = () => {
                 whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 300, damping: 5 }}
               >
-                <a className="hover:text-orange-500 hover:underline underline-offset-4">
+                <a className="hover:text-orange-500 hover:underline underline-offset-4 cursor-pointer">
                   ORDERS
                 </a>
               </motion.li>
