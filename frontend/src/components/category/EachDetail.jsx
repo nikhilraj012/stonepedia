@@ -5,7 +5,7 @@ import { IoLogoTwitter } from "react-icons/io5";
 import { FaGooglePlus } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io5";
 
-const EachDetail = ({ product }) => {
+const EachDetail = ({ product, addToCart }) => {
   const [value, setvalue] = useState(6000);
   const [thickness, setThickness] = useState("");
   const [finish, setFinish] = useState("");
