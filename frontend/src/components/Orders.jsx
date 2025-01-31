@@ -1,9 +1,9 @@
-import { del } from "framer-motion/client";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Orders = () => {
   const navigate = useNavigate();
+
   const initialOrders = [
     {
       id: 1,
@@ -59,7 +59,7 @@ const Orders = () => {
               {initialOrders.map((eachOrder) => (
                 <li
                   key={eachOrder.id}
-                  className="border flex  justify-between p-5 rounded-xl shadow-lg"
+                  className="border flex  justify-between items-center p-5 rounded-xl shadow-lg"
                 >
                   <div className="flex gap-3 lg:w-96">
                     <img
@@ -91,7 +91,7 @@ const Orders = () => {
                   </div>
 
                   <div className="flex flex-col gap-1 items-end px-3 w-60  ">
-                    <p className="text-sm">
+                    {/* <p className="text-sm">
                       <span className="mr-1">Ordered Date :</span>
                       {eachOrder.orderDate}
                     </p>
@@ -102,7 +102,7 @@ const Orders = () => {
                     <p className="text-sm">
                       <span className="mr-1">Delivery Date :</span>
                       {eachOrder.deliveryDate}
-                    </p>
+                    </p> */}
                     <p
                       className={`font-semibold text-center self-center w-full ${
                         eachOrder.orderStatus === "Approved"
