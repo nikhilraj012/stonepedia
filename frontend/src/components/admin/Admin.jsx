@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaBoxOpen, FaHome, FaUsers } from "react-icons/fa";
-import { LuCircleArrowDown } from "react-icons/lu";
+// import { LuCircleArrowDown } from "react-icons/lu";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import { db } from "../firebase/firebase";
 import { collection, getDocs } from "firebase/firestore";
 
@@ -97,7 +98,7 @@ const Admin = () => {
                       className="text-sm font-semibold text-gray-800"
                       onClick={() => toggleExpand(order.id)}
                     >
-                      <LuCircleArrowDown
+                      <MdKeyboardArrowDown
                         size={20}
                         className={`transition-transform duration-300 ${
                           expandedRow === order.id ? "rotate-180" : ""
