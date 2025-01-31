@@ -1,56 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaBoxOpen, FaHome, FaUsers } from "react-icons/fa";
 import { LuCircleArrowDown } from "react-icons/lu";
+import { db } from "../firebase/firebase";
+import { collection, getDocs } from "firebase/firestore";
 
 const Admin = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("orders");
   const [expandedRow, setExpandedRow] = useState(null);
+  const [pendingOrders, setPendingOrders] = useState([]);
 
-  const orders = [
-    {
-      id: 10523,
-      userName : "Micheal",
-      email : "micheal@gmail.com",
-      orderDate: "2025-01-12",
-      status: "Approved",
-      imgUrl:
-        "https://stonepedia.in/wp-content/uploads/2024/10/Lalitpur-Grey-Limestone-01-.png",
-      title: "Lalitpur Grey Limestone",
-      quantity: 1000,
-      thickness: "20mm",
-      finish: "Honed",
-    },
-    {
-      id: 12568,
-      userName : "John Doe",
-      email : "John@gmail.com",
-      orderDate: "2025-01-12",
-      status: "In Progress",
-      imgUrl:
-        "https://stonepedia.in/wp-content/uploads/2024/10/kurnool-grey-limestone-01-.png",
-      title: "Kurnool Grey Limestone",
-      quantity: 2000,
-      thickness: "20mm",
-      finish: "Honed",
-    },
-  ];
-
-  const customers = [
-    {
-      id: 1,
-      name: "John Doe",
-      email: "john.doe@example.com",
-      orders: 5,
-    },
-    {
-      id: 2,
-      name: "Jane Smith",
-      email: "jane.smith@example.com",
-      orders: 3,
-    },
-  ];
+  useEffect(() => {
+    const fetchOrders = async () => {
+      try {
+        const pendingOrdersCollection = collection(db, "pendingProducts");
+        const ordersSnapshot = await getDocs(pendingOrdersCollection);
+        const ordersList = ordersSnapshot.docs.map((doc) => {
+          // Add the doc.id as a property for each order object
+          return { id: doc.id, ...doc.data() };
+        });
+        setPendingOrders(ordersList);
+        console.log("Pending Orders:", ordersList); // Log the orders to the console
+      } catch (error) {
+        console.error("Error fetching orders: ", error);
+      }
+    };
+    fetchOrders();
+  }, []);
 
   const toggleExpand = (id) => {
     setExpandedRow(expandedRow === id ? null : id);
@@ -101,145 +78,97 @@ const Admin = () => {
           <>
             <h1 className="text-3xl font-bold text-gray-800">Orders</h1>
             <div className="mt-5 bg-white shadow rounded-lg p-5">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr>
-                    <th className="p-3">Product</th>
-                    <th className="p-3">Order Id</th>
-                    <th className="p-3">Status</th>
-                    {/* <th className="p-3">Actions</th> */}
-                  </tr>
-                </thead>
-                <tbody>
-                  {orders.map((order) => (
-                    <React.Fragment key={order.id}>
-                      <tr className="border-t">
-                        <td className="p-3 flex items-center gap-3">
-                          <img
-                            src={order.imgUrl}
-                            alt={order.title}
-                            className="h-12 w-12 rounded-lg border"
-                          />
-                          <span>{order.title}</span>
-                        </td>
-                        <td className="p-3">{order.id}</td>
-                        <td className="p-3 font-semibold text-blue-600">
-                          {order.status}
-                        </td>
-                        <td>
-                          <button
-                            type="button"
-                            className="mx-5"
-                            onClick={() => toggleExpand(order.id)}
-                          >
-                            <LuCircleArrowDown
-                              size={20}
-                              className={`transform transition-transform duration-300 ${
-                                expandedRow === order.id ? "rotate-180" : ""
-                              }`}
-                            />
-                          </button>
-                        </td>
-                      </tr>
+              {pendingOrders.map((order) => (
+                <div key={order.id} className="border-b border-gray-200 py-3">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <p className="font-semibold">
+                        Name: {order.customername}
+                      </p>
+                      <p>Email: {order.email}</p>
+                    </div>
+                    <div>
+                      <h1 className="font-semibold">
+                        Order Id: {order.orderId}
+                      </h1>
+                      <p>Date & Time: {order.orderDate}</p>
+                    </div>
+                    <button
+                      className="text-sm font-semibold text-gray-800"
+                      onClick={() => toggleExpand(order.id)}
+                    >
+                      <LuCircleArrowDown
+                        size={20}
+                        className={`transition-transform duration-300 ${
+                          expandedRow === order.id ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                  </div>
 
-                      {/* Expanded Row with Smooth Animation */}
-                      <tr>
-                        <td colSpan="4">
-                          <div
-                            className={`overflow-hidden transition-all duration-500 ease-linear ${
-                              expandedRow === order.id
-                                ? "max-h-60 p-3"
-                                : "max-h-0 p-0"
-                            }`}
-                          >
-                            {expandedRow === order.id && (
-                              <div className="flex justify-between items-center border-t pt-2 mx-5">
+                  {expandedRow === order.id && (
+                    <div className="rounded-lg">
+                      {/* <h2 className="font-bold">Ordered Products:</h2> */}
+                      {order.products.length > 0 && (
+                        <ul className="">
+                          {order.products.map((product, index) => (
+                            <li
+                              key={index}
+                              className="flex justify-between  items-center py-2 bg-gray-100 my-2 rounded-lg p-3"
+                            >
+                              <div className="flex gap-4 items-center">
+                                <img
+                                  src={product.imgUrl}
+                                  alt={product.title}
+                                  className="h-16 w-16 rounded-lg border"
+                                />
                                 <div>
                                   <p className="font-semibold">
-                                    Customer Name:{" "}
-                                    <span className="text-gray-700">
-                                      {order.userName}
-                                    </span>
+                                    {product.title}
                                   </p>
-                                  <p className="font-semibold">
-                                    Email:{" "}
-                                    <span className="text-gray-700">
-                                      {order.email}
+                                  <p className="text-gray-700 text-sm">
+                                    <span className="font-semibold text-gray-950">
+                                      Thickness:{" "}
                                     </span>
-                                  </p>
-                                  <p className="font-semibold">
-                                    Order Date:{" "}
-                                    <span className="text-gray-700">
-                                      {order.orderDate}
+                                    {product.thickness}mm,
+                                    <span className="font-semibold text-gray-950">
+                                      Finish:{" "}
                                     </span>
+                                    {product.finish},
                                   </p>
-                                </div>
-                                <div>
-                                  <p className="font-semibold">
-                                    Thickness:{" "}
-                                    <span className="text-gray-700">
-                                      {order.thickness}
+                                  <p className="text-gray-700 text-sm">
+                                    <span className="font-semibold text-gray-950">
+                                      Value:{" "}
                                     </span>
+                                    {product.value}
                                   </p>
-                                  <p className="font-semibold">
-                                    Finishing:{" "}
-                                    <span className="text-gray-700">
-                                      {order.finish}
-                                    </span>
-                                  </p>
-                                  <p className="font-semibold">
-                                    Quantity:{" "}
-                                    <span className="text-gray-700">
-                                      {order.quantity}
-                                    </span>
-                                  </p>
-                                </div>
-                                <div className="flex gap-2 ">
-                                  <button className="bg-green-500 text-white px-3 py-1 rounded-lg text-sm">
-                                    Approve
-                                  </button>
-                                  <button className="bg-red-500 text-white px-3 py-1 rounded-lg text-sm">
-                                    Reject
-                                  </button>
                                 </div>
                               </div>
-                            )}
-                          </div>
-                        </td>
-                      </tr>
-                    </React.Fragment>
-                  ))}
-                </tbody>
-              </table>
+                              <div className="space-x-2">
+                                <button
+                                  type="button"
+                                  className="bg-green-500 text-sm py-1 text-white font-semibold px-2 rounded-lg"
+                                >
+                                  Accept
+                                </button>
+                                <button
+                                  type="button"
+                                  className="bg-red-500 text-sm py-1 text-white font-semibold px-2 rounded-lg"
+                                >
+                                  Reject
+                                </button>
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </>
         )}
-
-        {/* {activeTab === "customers" && (
-          <>
-            <h1 className="text-3xl font-bold text-gray-800">Customers</h1>
-            <div className="mt-5 bg-white shadow rounded-lg p-5">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="border-b">
-                    <th className="p-3">Name</th>
-                    <th className="p-3">Email</th>
-                    <th className="p-3">Orders</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {customers.map((customer) => (
-                    <tr key={customer.id} className="border-b hover:bg-gray-50">
-                      <td className="p-3">{customer.name}</td>
-                      <td className="p-3">{customer.email}</td>
-                      <td className="p-3">{customer.orders}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </>
-        )} */}
       </main>
     </div>
   );

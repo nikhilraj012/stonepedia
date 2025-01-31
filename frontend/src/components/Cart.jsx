@@ -31,7 +31,16 @@ const Cart = () => {
       // Create a new order object that contains all products in the cart
       const orderData = {
         orderId: Math.floor(Math.random() * 100000),
-        orderDate: new Date().toISOString(),
+        orderDate: (() => {
+          const now = new Date();
+          const day = String(now.getDate()).padStart(2, '0');
+          const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+          const year = now.getFullYear();
+          const hours = String(now.getHours()).padStart(2, '0');
+          const minutes = String(now.getMinutes()).padStart(2, '0');
+      
+          return `${day}-${month}-${year} ${hours}:${minutes}`;
+        })(),
         customername: userData.userName,
         email: auth.currentUser.email,
         orderStatus: "pending",
@@ -44,7 +53,7 @@ const Cart = () => {
         })),
       };
   
-      // console.log("Order Data: ", orderData);
+      console.log("Order Data: ", orderData);
   
       // Save the order to the user's 'userOrders' sub-collection
       await addDoc(collection(db, "pendingProducts"), orderData);
