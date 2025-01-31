@@ -3,6 +3,9 @@ import { FaPlus, FaMinus } from "react-icons/fa6";
 import { ImCancelCircle } from "react-icons/im";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import { collection, addDoc, doc, getDoc } from "firebase/firestore";
+import { db } from "../components/firebase/firebase";
+import { auth } from "../components/firebase/firebase";
 
 const Cart = () => {
   const { cartItems, removeFromCart, clearCart, updateCartItemQuantity } =
@@ -12,10 +15,41 @@ const Cart = () => {
   const handleIncrement = (id, currentValue) => {
     updateCartItemQuantity(id, currentValue + 100);
   };
-  
+
   const handleDecrement = (id, currentValue) => {
     if (currentValue > 6000) {
       updateCartItemQuantity(id, currentValue - 100);
+    }
+  };
+
+  const saveOrderToFirebase = async () => {
+    try {
+      const userDocRef = doc(db, "Users", auth.currentUser.uid);
+      const userDocSnap = await getDoc(userDocRef);
+      const userData = userDocSnap.data();
+
+      // console.log("User Data: ", userData);
+      
+      const orderData = {
+        orderId: Math.floor(Math.random() * 100000),
+        orderDate: new Date().toISOString(),
+        customername: userData.userName,
+        email: auth.currentUser.email,
+        orderStatus: "pending",
+        imgUrl: cartItems[0].imgUrl,
+        title: cartItems[0].title,
+        thickness: cartItems[0].thickness,
+        finish: cartItems[0].finish,
+        value: cartItems[0].value,
+      };
+
+      console.log("Order Data: ", orderData);
+
+      await addDoc(collection(db, "pendingOrders"), orderData);
+      clearCart();
+      navigate("/checkout");
+    } catch (error) {
+      console.error("Error adding document: ", error);
     }
   };
 
@@ -74,14 +108,18 @@ const Cart = () => {
                   <div className="flex items-center border gap-5 p-3 ">
                     <button
                       type="button"
-                      onClick={() => handleDecrement(eachProduct.id, eachProduct.value)}
+                      onClick={() =>
+                        handleDecrement(eachProduct.id, eachProduct.value)
+                      }
                     >
                       <FaMinus />
                     </button>
                     <p>{eachProduct.value}</p>
                     <button
                       type="button"
-                      onClick={() => handleIncrement(eachProduct.id, eachProduct.value)}
+                      onClick={() =>
+                        handleIncrement(eachProduct.id, eachProduct.value)
+                      }
                     >
                       <FaPlus />
                     </button>
@@ -109,12 +147,15 @@ const Cart = () => {
                   <span className="font-semibold text-black">Rs 62000/-</span>
                 </h1>
                 <p className="text-gray-500 text-lg">
-                  <span className="font-bold text-black">{cartItems.length}</span> items in cart
+                  <span className="font-bold text-black">
+                    {cartItems.length}
+                  </span>{" "}
+                  items in cart
                 </p>
                 <button
                   type="button"
                   className="border w-full bg-orange-500 font-bold p-2 rounded-lg text-white"
-                  onClick={() => navigate("/checkout")}
+                  onClick={saveOrderToFirebase}
                 >
                   Checkout
                 </button>

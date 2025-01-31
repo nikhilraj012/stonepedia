@@ -20,7 +20,7 @@ const ProductDetails = () => {
           // Get the first document that matches the product id
           const docSnap = querySnapshot.docs[0];
           setProduct(docSnap.data()); // Set the product data
-          console.log("Product data:", docSnap.data());
+          // console.log("Product data:", docSnap.data());
         } else {
           console.log("No such product!");
         }

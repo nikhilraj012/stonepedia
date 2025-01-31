@@ -41,7 +41,7 @@ const EachDetail = ({ product }) => {
     };
 
     addToCart(cartItem);
-    console.log("Added to cart:", cartItem);
+    // console.log("Added to cart:", cartItem);
   };
 
   return (
