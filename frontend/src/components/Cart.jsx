@@ -27,31 +27,37 @@ const Cart = () => {
       const userDocRef = doc(db, "Users", auth.currentUser.uid);
       const userDocSnap = await getDoc(userDocRef);
       const userData = userDocSnap.data();
-
-      // console.log("User Data: ", userData);
-      
+  
+      // Create a new order object that contains all products in the cart
       const orderData = {
         orderId: Math.floor(Math.random() * 100000),
         orderDate: new Date().toISOString(),
         customername: userData.userName,
         email: auth.currentUser.email,
         orderStatus: "pending",
-        imgUrl: cartItems[0].imgUrl,
-        title: cartItems[0].title,
-        thickness: cartItems[0].thickness,
-        finish: cartItems[0].finish,
-        value: cartItems[0].value,
+        products: cartItems.map((eachProduct) => ({
+          imgUrl: eachProduct.imgUrl,
+          title: eachProduct.title,
+          thickness: eachProduct.thickness,
+          finish: eachProduct.finish,
+          value: eachProduct.value,
+        })),
       };
-
-      console.log("Order Data: ", orderData);
-
-      await addDoc(collection(db, "pendingOrders"), orderData);
+  
+      // console.log("Order Data: ", orderData);
+  
+      // Save the order to the user's 'userOrders' sub-collection
+      await addDoc(collection(db, "pendingProducts"), orderData);
+  
+      // Clear the cart after successful order placement
       clearCart();
       navigate("/checkout");
     } catch (error) {
       console.error("Error adding document: ", error);
     }
   };
+  
+  
 
   return (
     <div className="py-20">

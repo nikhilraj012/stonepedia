@@ -6,7 +6,7 @@ export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
-
+  // console.log("Cart Items: ", cartItems);
   const addToCart = (product) => {
     setCartItems((prevItems) => {
       const existingItem = prevItems.find((item) => item.id === product.id);
@@ -21,7 +21,7 @@ export const CartProvider = ({ children }) => {
         position: "bottom-center",
         autoClose: 2000,
       });
-      return [...prevItems, { ...product, value: 6000 }];
+      return [...prevItems, product];
     });
   };
 
