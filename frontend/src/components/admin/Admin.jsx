@@ -13,6 +13,7 @@ import {
 import { BiSearch } from "react-icons/bi";
 import AcceptedOrders from "./AcceptedOrders";
 import RejectedOrders from "./RejectedOrders";
+import {Puff} from "react-loader-spinner";
 
 const Admin = () => {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ const Admin = () => {
   const [expandedRow, setExpandedRow] = useState(null);
   const [pendingOrders, setPendingOrders] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -33,7 +35,10 @@ const Admin = () => {
           return { id: doc.id, ...doc.data() };
         });
         setPendingOrders(ordersList);
-        // console.log("Pending Orders:", ordersList); 
+        // console.log("Pending Orders:", ordersList);
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
       } catch (error) {
         console.error("Error fetching orders: ", error);
       }
@@ -155,99 +160,105 @@ const Admin = () => {
             </div>
 
             <div className="mt-5 bg-white shadow rounded-lg p-5">
-              {filteredOrders.map((order) => (
-                <div key={order.id} className="border-b border-gray-200 py-3">
-                  <div className="flex justify-between items-center">
-                    <div className="flex gap-4">
-                      {/* <p className="border rounded-full self-start px-1">{}</p> */}
-                      <div>
-                        <p className="font-semibold">
-                          Name: {order.customername}
-                        </p>
-                        <p>Email: {order.email}</p>
-                      </div>
-                    </div>
-                    <div>
-                      <h1 className="font-semibold">
-                        Order Id: {order.orderId}
-                      </h1>
-                      <p>Date & Time: {order.orderDate}</p>
-                    </div>
-                    <button
-                      className="text-sm font-semibold text-gray-800"
-                      onClick={() => toggleExpand(order.id)}
-                    >
-                      <MdKeyboardArrowDown
-                        size={20}
-                        className={`transition-transform duration-300 ${
-                          expandedRow === order.id ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-                  </div>
-
-                  {expandedRow === order.id && (
-                    <div className="rounded-lg">
-                      {/* <h2 className="font-bold">Ordered Products:</h2> */}
-                      {order.products.length > 0 && (
-                        <ul className="">
-                          {order.products.map((product, index) => (
-                            <li
-                              key={index}
-                              className="flex justify-between  items-center py-2 bg-gray-100 my-2 rounded-lg p-3"
-                            >
-                              <div className="flex gap-4 items-center">
-                                <img
-                                  src={product.imgUrl}
-                                  alt={product.title}
-                                  className="h-16 w-16 rounded-lg border"
-                                />
-                                <div>
-                                  <p className="font-semibold">
-                                    {product.title}
-                                  </p>
-                                  <p className="text-gray-700 text-sm">
-                                    <span className="font-semibold text-gray-950">
-                                      Thickness:{" "}
-                                    </span>
-                                    {product.thickness}mm,
-                                    <span className="font-semibold text-gray-950">
-                                      Finish:{" "}
-                                    </span>
-                                    {product.finish},
-                                  </p>
-                                  <p className="text-gray-700 text-sm">
-                                    <span className="font-semibold text-gray-950">
-                                      Value:{" "}
-                                    </span>
-                                    {product.value}
-                                  </p>
-                                </div>
-                              </div>
-                              <div className="space-x-2">
-                                <button
-                                  type="button"
-                                  className="bg-green-500 text-sm py-1 text-white font-semibold px-2 rounded-lg"
-                                  onClick={() => handleAcceptOrders(order)}
-                                >
-                                  Accept
-                                </button>
-                                <button
-                                  type="button"
-                                  className="bg-red-500 text-sm py-1 text-white font-semibold px-2 rounded-lg"
-                                  onClick={() => handleRejectOrders(order)}
-                                >
-                                  Reject
-                                </button>
-                              </div>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  )}
+              {loading ? (
+                <div className="flex justify-center">
+                  <Puff color="#00BFFF" height={50} width={50} />
                 </div>
-              ))}
+              ) : filteredOrders.length > 0 ? (
+                filteredOrders.map((order) => (
+                  <div key={order.id} className="border-b border-gray-200 py-3">
+                    <div className="flex justify-between items-center">
+                      <div className="flex gap-4">
+                        <div>
+                          <p className="font-semibold">
+                            Name: {order.customername}
+                          </p>
+                          <p>Email: {order.email}</p>
+                        </div>
+                      </div>
+                      <div>
+                        <h1 className="font-semibold">
+                          Order Id: {order.orderId}
+                        </h1>
+                        <p>Date & Time: {order.orderDate}</p>
+                      </div>
+                      <button
+                        className="text-sm font-semibold text-gray-800"
+                        onClick={() => toggleExpand(order.id)}
+                      >
+                        <MdKeyboardArrowDown
+                          size={20}
+                          className={`transition-transform duration-300 ${
+                            expandedRow === order.id ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                    </div>
+
+                    {expandedRow === order.id && (
+                      <div className="rounded-lg">
+                        {order.products.length > 0 && (
+                          <ul>
+                            {order.products.map((product, index) => (
+                              <li
+                                key={index}
+                                className="flex justify-between items-center py-2 bg-gray-100 my-2 rounded-lg p-3"
+                              >
+                                <div className="flex gap-4 items-center">
+                                  <img
+                                    src={product.imgUrl}
+                                    alt={product.title}
+                                    className="h-16 w-16 rounded-lg border"
+                                  />
+                                  <div>
+                                    <p className="font-semibold">
+                                      {product.title}
+                                    </p>
+                                    <p className="text-gray-700 text-sm">
+                                      <span className="font-semibold text-gray-950">
+                                        Thickness:{" "}
+                                      </span>
+                                      {product.thickness}mm,
+                                      <span className="font-semibold text-gray-950">
+                                        Finish:{" "}
+                                      </span>
+                                      {product.finish},
+                                    </p>
+                                    <p className="text-gray-700 text-sm">
+                                      <span className="font-semibold text-gray-950">
+                                        Value:{" "}
+                                      </span>
+                                      {product.value}
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="space-x-2">
+                                  <button
+                                    type="button"
+                                    className="bg-green-500 text-sm py-1 text-white font-semibold px-2 rounded-lg"
+                                    onClick={() => handleAcceptOrders(order)}
+                                  >
+                                    Accept
+                                  </button>
+                                  <button
+                                    type="button"
+                                    className="bg-red-500 text-sm py-1 text-white font-semibold px-2 rounded-lg"
+                                    onClick={() => handleRejectOrders(order)}
+                                  >
+                                    Reject
+                                  </button>
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ))
+              ) : (
+                <p className="text-gray-600">No accepted orders found.</p>
+              )}
             </div>
           </>
         )}

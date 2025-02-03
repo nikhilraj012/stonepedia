@@ -12,7 +12,6 @@ const AcceptedOrders = () => {
   useEffect(() => {
     const fetchAcceptedOrders = async () => {
       try {
-        setLoading(true);
         const acceptedOrdersCollection = collection(db, "acceptedOrders");
         const ordersSnapshot = await getDocs(acceptedOrdersCollection);
         const ordersList = ordersSnapshot.docs.map((doc) => ({
@@ -20,6 +19,10 @@ const AcceptedOrders = () => {
           ...doc.data(),
         }));
         setAcceptedOrders(ordersList);
+
+        setTimeout(()=> {
+            setLoading(false);
+        }, 2000)
       } catch (error) {
         console.error("Error fetching accepted orders", error);
       } finally {
@@ -81,7 +84,7 @@ const AcceptedOrders = () => {
             </div>
           ))
         ) : (
-          <p className="text-gray-600">No accepted orders found.</p>
+          <p className="text-gray-600 text-center text-2xl">No accepted orders found.</p>
         )}
       </div>
     </div>
