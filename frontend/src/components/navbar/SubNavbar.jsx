@@ -430,7 +430,7 @@ const SubNavbar = ({ isHovered, onMouseEnter, onMouseLeave }) => {
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        <Link>
+        {/* <Link>
           <li
             className={`cursor-pointer ${
               isHovered ? "text-black" : "text-white"
@@ -467,7 +467,7 @@ const SubNavbar = ({ isHovered, onMouseEnter, onMouseLeave }) => {
           onMouseLeave={() => setIsGetTheAppHovered(false)}
         >
           Get the app
-        </li>
+        </li> */}
         <Link to="/becomeSupplier">
           <li
             className={`cursor-pointer ${
