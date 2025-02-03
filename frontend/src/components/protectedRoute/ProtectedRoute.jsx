@@ -6,7 +6,7 @@ const ProtectedRoute = ({ children, restricted }) => {
   const userEmail = localStorage.getItem("userEmail");
 
   // Define admin emails
-  const adminEmails = ["admin@stonepedia.com", "superuser@stonepedia.com"];
+  const adminEmails = ["admin@stonepedia.in", "super@stonepedia.in"];
 
   // If the user is logged in as an admin and tries to access the home route, redirect them to admin
   if (authToken && adminEmails.includes(userEmail) && window.location.pathname === "/") {

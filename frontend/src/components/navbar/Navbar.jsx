@@ -17,7 +17,7 @@ const Navbar = () => {
   const userEmail = localStorage.getItem("userEmail");
   const { cartItems } = useCart();
 
-  const adminEmails = ["admin@stonepedia.com", "superuser@stonepedia.com"];
+  const adminEmails = ["admin@stonepedia.in", "super@stonepedia.in"];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

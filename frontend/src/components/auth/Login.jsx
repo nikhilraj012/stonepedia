@@ -12,20 +12,20 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const adminEmails = ["admin@stonepedia.com", "superuser@stonepedia.com"];
+  const adminEmails = ["admin@stonepedia.in", "super@stonepedia.in"];
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
       const response = await signInWithEmailAndPassword(auth, email, password);
-      console.log("User Logged in Successfully", response);
+      // console.log("User Logged in Successfully", response);
 
       // Get the ID token after successful login
       const idToken = await response.user.getIdToken();
 
       // Store the ID token and email in localStorage
       localStorage.setItem("authToken", idToken);
-      localStorage.setItem("userEmail", email);
+      localStorage.setItem("userEmail", email.toLowerCase());
 
       toast.success("User Logged in Successfully!!", {
         position: "top-center",
@@ -33,7 +33,7 @@ const Login = () => {
       });
 
       // Redirect based on whether the user is an admin or not
-      if (adminEmails.includes(email)) {
+      if (adminEmails.includes(email.toLowerCase())) {
         navigate("/admin");  // Redirect to admin if email is an admin
       } else {
         navigate("/");  // Redirect to home for non-admin users

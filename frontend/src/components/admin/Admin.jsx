@@ -1,16 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaBoxOpen, FaHome, FaUsers } from "react-icons/fa";
-// import { LuCircleArrowDown } from "react-icons/lu";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { db } from "../firebase/firebase";
-import { collection, getDocs } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  addDoc,
+  deleteDoc,
+  doc,
+} from "firebase/firestore";
+import { BiSearch } from "react-icons/bi";
+import AcceptedOrders from "./AcceptedOrders";
+import RejectedOrders from "./RejectedOrders";
 
 const Admin = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("orders");
+  const [acceptedOrders, setAcceptedOrder] = useState([]);
+  const [rejectedOrders, setRejectedOrders] = useState([]);
   const [expandedRow, setExpandedRow] = useState(null);
   const [pendingOrders, setPendingOrders] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     const fetchOrders = async () => {
@@ -22,7 +33,7 @@ const Admin = () => {
           return { id: doc.id, ...doc.data() };
         });
         setPendingOrders(ordersList);
-        console.log("Pending Orders:", ordersList); // Log the orders to the console
+        // console.log("Pending Orders:", ordersList); 
       } catch (error) {
         console.error("Error fetching orders: ", error);
       }
@@ -34,10 +45,39 @@ const Admin = () => {
     setExpandedRow(expandedRow === id ? null : id);
   };
 
+  const filteredOrders = pendingOrders.filter(
+    (order) =>
+      order.customername.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      order.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      order.orderId.toString().includes(searchQuery)
+  );
+
+  const handleAcceptOrders = async (order) => {
+    try {
+      await addDoc(collection(db, "acceptedOrders"), order);
+      await deleteDoc(doc(db, "pendingProducts", order.id));
+      setPendingOrders(pendingOrders.filter((item) => item.id !== order.id));
+      setAcceptedOrder([...acceptedOrders, order]);
+    } catch (error) {
+      console.error("Error accepting order: ", error);
+    }
+  };
+
+  const handleRejectOrders = async (order) => {
+    try {
+      await addDoc(collection(db, "rejectedOrders"), order); // Add order to rejectedOrders
+      await deleteDoc(doc(db, "pendingProducts", order.id)); // Remove from pendingProducts
+      setPendingOrders(pendingOrders.filter((o) => o.id !== order.id)); // Update UI
+      setRejectedOrders([...rejectedOrders, order]); // Update Rejected Orders state
+    } catch (error) {
+      console.error("Error rejecting order: ", error);
+    }
+  };
+
   return (
     <div className="pt-16 flex h-screen bg-gray-100">
       {/* Sidebar */}
-      <div className="w-40 xl:w-64 bg-gray-900 text-white flex flex-col p-5">
+      <div className="w-52 xl:w-64 bg-gray-900 text-white flex flex-col p-5">
         <h1 className="text-xl font-bold">Admin</h1>
         <nav className="mt-5 space-y-3">
           <button
@@ -55,6 +95,26 @@ const Admin = () => {
             onClick={() => setActiveTab("orders")}
           >
             <FaBoxOpen /> Orders
+          </button>
+          <button
+            className={`flex items-center gap-2 p-2 ${
+              activeTab === "acceptedOrders"
+                ? "bg-gray-800"
+                : "hover:bg-gray-700"
+            } rounded-lg w-full`}
+            onClick={() => setActiveTab("acceptedOrders")}
+          >
+            <FaBoxOpen /> Accepted Orders
+          </button>
+          <button
+            className={`flex items-center gap-2 p-2 ${
+              activeTab === "rejectedOrders"
+                ? "bg-gray-800"
+                : "hover:bg-gray-700"
+            } rounded-lg w-full`}
+            onClick={() => setActiveTab("rejectedOrders")}
+          >
+            <FaBoxOpen /> Rejected Orders
           </button>
         </nav>
       </div>
@@ -77,16 +137,35 @@ const Admin = () => {
 
         {activeTab === "orders" && (
           <>
-            <h1 className="text-3xl font-bold text-gray-800">Orders</h1>
+            <div className="flex justify-between">
+              <h1 className="text-3xl font-bold text-gray-800">Orders</h1>
+              <div className="flex items-center gap-1 border rounded-lg w-96 px-2">
+                <label htmlFor="search" className="cursor-pointer">
+                  <BiSearch />
+                </label>
+                <input
+                  id="search"
+                  type="search"
+                  className="bg-transparent outline-none text-sm w-full"
+                  placeholder="Search Name or Id"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+              </div>
+            </div>
+
             <div className="mt-5 bg-white shadow rounded-lg p-5">
-              {pendingOrders.map((order) => (
+              {filteredOrders.map((order) => (
                 <div key={order.id} className="border-b border-gray-200 py-3">
                   <div className="flex justify-between items-center">
-                    <div>
-                      <p className="font-semibold">
-                        Name: {order.customername}
-                      </p>
-                      <p>Email: {order.email}</p>
+                    <div className="flex gap-4">
+                      {/* <p className="border rounded-full self-start px-1">{}</p> */}
+                      <div>
+                        <p className="font-semibold">
+                          Name: {order.customername}
+                        </p>
+                        <p>Email: {order.email}</p>
+                      </div>
                     </div>
                     <div>
                       <h1 className="font-semibold">
@@ -149,12 +228,14 @@ const Admin = () => {
                                 <button
                                   type="button"
                                   className="bg-green-500 text-sm py-1 text-white font-semibold px-2 rounded-lg"
+                                  onClick={() => handleAcceptOrders(order)}
                                 >
                                   Accept
                                 </button>
                                 <button
                                   type="button"
                                   className="bg-red-500 text-sm py-1 text-white font-semibold px-2 rounded-lg"
+                                  onClick={() => handleRejectOrders(order)}
                                 >
                                   Reject
                                 </button>
@@ -170,6 +251,10 @@ const Admin = () => {
             </div>
           </>
         )}
+
+        {activeTab === "acceptedOrders" && <AcceptedOrders />}
+
+        {activeTab === "rejectedOrders" && <RejectedOrders />}
       </main>
     </div>
   );
