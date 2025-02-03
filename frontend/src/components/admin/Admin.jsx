@@ -13,11 +13,14 @@ import {
 import { BiSearch } from "react-icons/bi";
 import AcceptedOrders from "./AcceptedOrders";
 import RejectedOrders from "./RejectedOrders";
-import {Puff} from "react-loader-spinner";
+import { Puff } from "react-loader-spinner";
 
 const Admin = () => {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState("orders");
+  const [activeTab, setActiveTab] = useState(() => {
+    // Retrieve active tab from localStorage, default to "orders" if not found
+    return localStorage.getItem("activeTab") || "orders";
+  });
   const [acceptedOrders, setAcceptedOrder] = useState([]);
   const [rejectedOrders, setRejectedOrders] = useState([]);
   const [expandedRow, setExpandedRow] = useState(null);
@@ -79,6 +82,12 @@ const Admin = () => {
     }
   };
 
+  // Update the active tab and store it in localStorage
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    localStorage.setItem("activeTab", tab); // Store active tab in localStorage
+  };
+
   return (
     <div className="pt-16 flex h-screen bg-gray-100">
       {/* Sidebar */}
@@ -89,7 +98,7 @@ const Admin = () => {
             className={`flex items-center gap-2 p-2 ${
               activeTab === "dashboard" ? "bg-gray-800" : "hover:bg-gray-700"
             } rounded-lg w-full`}
-            onClick={() => setActiveTab("dashboard")}
+            onClick={() => handleTabChange("dashboard")}
           >
             <FaBoxOpen /> Dashboard
           </button>
@@ -97,7 +106,7 @@ const Admin = () => {
             className={`flex items-center gap-2 p-2 ${
               activeTab === "orders" ? "bg-gray-800" : "hover:bg-gray-700"
             } rounded-lg w-full`}
-            onClick={() => setActiveTab("orders")}
+            onClick={() => handleTabChange("orders")}
           >
             <FaBoxOpen /> Orders
           </button>
@@ -107,7 +116,7 @@ const Admin = () => {
                 ? "bg-gray-800"
                 : "hover:bg-gray-700"
             } rounded-lg w-full`}
-            onClick={() => setActiveTab("acceptedOrders")}
+            onClick={() => handleTabChange("acceptedOrders")}
           >
             <FaBoxOpen /> Accepted Orders
           </button>
@@ -117,7 +126,7 @@ const Admin = () => {
                 ? "bg-gray-800"
                 : "hover:bg-gray-700"
             } rounded-lg w-full`}
-            onClick={() => setActiveTab("rejectedOrders")}
+            onClick={() => handleTabChange("rejectedOrders")}
           >
             <FaBoxOpen /> Rejected Orders
           </button>
@@ -166,7 +175,10 @@ const Admin = () => {
                 </div>
               ) : filteredOrders.length > 0 ? (
                 filteredOrders.map((order) => (
-                  <div key={order.id} className="border-b border-gray-200 py-3">
+                  <div
+                    key={order.id}
+                    className="border p-3 border-gray-100 shadow-md rounded-lg my-3"
+                  >
                     <div className="flex justify-between items-center">
                       <div className="flex gap-4">
                         <div>
