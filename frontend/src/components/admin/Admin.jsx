@@ -181,7 +181,7 @@ const Admin = () => {
                   >
                     <div className="flex justify-between items-center">
                       <div className="flex gap-4">
-                        <div>
+                        <div className="w-80">
                           <p className="font-semibold">
                             Name: {order.customername}
                           </p>
