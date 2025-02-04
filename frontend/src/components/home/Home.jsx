@@ -45,7 +45,7 @@ const Home = () => {
       <ExclusiveDeals />
       <Support />
       <News />
-      {/* <Steps /> */}
+      <Steps />
       <div className="bg-gradient-to-tr from-[#080d11] via-gray-700 to-amber-600">
         <Clients />
         <Blogs />
