@@ -52,10 +52,10 @@ const About = () => {
       // bg-gradient-to-br from-amber-900 via-gray-700 to-gray-900
     >
       <div className="relative flex flex-col justify-center items-center text-center space-y-4 px-4">
-        <p className="text-sm md:text-lg font-semibold text-yellow-400">
+        <p className="text-sm md:text-lg font-semibold text-[#FBAD30]">
           REDEFINING STONE SOURCING
         </p>
-        <h1 className="text-2xl md:text-4xl font-serif text-white">
+        <h1 className="text-2xl md:text-4xl font-serif text-[#871B58]">
           Why <span className="">StonePedia</span>?
         </h1>
 
@@ -68,7 +68,7 @@ const About = () => {
               <div
                 key={index}
                 id="card"
-                className="w-full cursor-pointer rounded-lx p-4 group duration-600 ease-out transform bg-gray-900 text-white relative rounded-2xl shadow-md  flex flex-col justify-between transition-transform duration-500 hover:scale-105 before:absolute before:w-1/5 before:h-1/5 before:bg-gradient-to-tr before:from-[#080d11] before:via-gray-700 before:to-amber-600 before:transition-all before:duration-500 before:top-0 before:right-0 before:rounded-tr-[15px] before:rounded-bl-[100%] hover:before:w-full hover:before:h-full hover:before:rounded-[15px]  hover:after:w-full hover:after:h-full hover:after:rounded-[15px] "
+                className="w-full cursor-pointer rounded-lx p-4 group duration-600 ease-out transform bg-gray-900 text-white relative rounded-2xl shadow-md  flex flex-col justify-between transition-transform duration-500 hover:scale-105 before:absolute before:w-1/5 before:h-1/5 before:bg-gradient-to-tr before:from-[#FBAD30] before:to-[#871B58] before:transition-all before:duration-500 before:top-0 before:right-0 before:rounded-tr-[15px] before:rounded-bl-[100%] hover:before:w-full hover:before:h-full hover:before:rounded-[15px]  hover:after:w-full hover:after:h-full hover:after:rounded-[15px] "
               >
                 <div className=" relative md:h-40">
                   <span>{course.icon}</span>

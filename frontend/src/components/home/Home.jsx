@@ -39,7 +39,7 @@ const images = [
 const Home = () => {
   return (
     <div>
-      <div className="bg-[#6F431A]">
+      <div className="bg-gray-200">
         <LandingPage />
         <About />
         <Category />
@@ -48,11 +48,11 @@ const Home = () => {
         <News />
         <Steps />
       </div>
-      <div className="bg-gradient-to-tr from-[#080d11] via-gray-700 to-amber-600">
+      {/* <div className="bg-gradient-to-tr from-[#080d11] via-gray-700 to-amber-600"> */}
         <Clients />
         <Blogs />
         <Testimonials />
-      </div>
+      {/* </div> */}
 
       <Footer />
     </div>

@@ -68,7 +68,7 @@ const LandingPage = () => {
           </div>
 
           <div className="w-full">
-            <div className="md:mt-5 flex bg-white rounded-full p-1 lg:p-3 gap-2 md:gap-5 overflow-hidden w-full">
+            <div className="md:mt-5 flex  rounded-full p-1 lg:p-3 gap-2 md:gap-5 overflow-hidden w-full bg-gray-200">
               {uploadedImage ? (
                 <input
                   type="search"
@@ -82,7 +82,7 @@ const LandingPage = () => {
                   placeholder={placeholder}
                 />
               )}
-              <div className="flex items-center gap-2 md:gap-3">
+              <div className="flex items-center gap-2 md:gap-3 ">
                 {uploadedImage && (
                   <img
                     src={uploadedImage}

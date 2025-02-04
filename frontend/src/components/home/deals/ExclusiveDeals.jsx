@@ -74,7 +74,7 @@ const ExclusiveDeals = () => {
   return (
     // bg-gray-900
     <div className="relative w-full min-h-[700px]  flex flex-col justify-center items-center">
-      <h2 className="text-white text-2xl font-semibold mb-6">Exclusive Deals</h2>
+      <h2 className="text-[#FBAD30] font-serif text-2xl font-semibold mb-6">Exclusive Deals</h2>
 
       {/* Carousel Container */}
       <div className="relative w-[90%] max-w-7xl h-[500px] overflow-hidden flex items-center">

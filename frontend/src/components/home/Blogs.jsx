@@ -69,15 +69,41 @@ const Blogs = () => {
   return (
     <div className="2xl:px-40">
       <div className="md:flex justify-between items-center p-5 max-md:space-y-2 md:px-10">
-        <h1 className="text-lg font-serif md:text-xl lg:text-2xl font-bold text-orange-600">
+        <h1 className="text-lg font-serif md:text-xl lg:text-2xl font-bold text-[#871B58]">
           Watch Our Latest Blog
         </h1>
-        <button className="flex items-center gap-2 bg-yellow-400 text-white font-semibold px-3 py-1 hover:bg-pink-800">
+        {/* <button className="flex items-center gap-2 bg-yellow-400 text-white font-semibold px-3 py-1 hover:bg-pink-800">
           VIEW MORE
           <span>
             <ImArrowRight2 />
           </span>
-        </button>
+        </button> */}
+
+        <a
+          href="#_"
+          class="relative inline-flex items-center justify-center p-4 px-6 py-1 overflow-hidden font-medium text-[#FBAD30] transition duration-300 ease-out border-2 border-orange-300 rounded-full shadow-md group"
+        >
+          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-orange-300 group-hover:translate-x-0 ease">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </span>
+          <span class="absolute flex items-center justify-center w-full h-full text-[#FBAD30] transition-all duration-300 transform group-hover:translate-x-full ease">
+            VIEW MORE
+          </span>
+          <span class="relative invisible">Button Text</span>
+        </a>
       </div>
 
       <div className="flex items-center justify-center mb-5">
