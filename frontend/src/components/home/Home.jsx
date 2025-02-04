@@ -38,14 +38,16 @@ const images = [
 
 const Home = () => {
   return (
-    <div className="bg-gradient-to-tr from-[#080d11] via-gray-700 to-amber-600">
-      <LandingPage />
-      <About />
-      <Category />
-      <ExclusiveDeals />
-      <Support />
-      <News />
-      <Steps />
+    <div>
+      <div className="bg-[#6F431A]">
+        <LandingPage />
+        <About />
+        <Category />
+        <ExclusiveDeals />
+        <Support />
+        <News />
+        <Steps />
+      </div>
       <div className="bg-gradient-to-tr from-[#080d11] via-gray-700 to-amber-600">
         <Clients />
         <Blogs />

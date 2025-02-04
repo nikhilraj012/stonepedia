@@ -51,7 +51,7 @@ const Category = () => {
     },
   ];
   return (
-    <div className="px-5 md:px-10 pt-5 2xl:px-40">
+    <div className="px-5 md:px-10 pt-5 xl:px-28 2xl:px-40">
       {/* bg-gradient-to-br from-amber-300 via-gray-700 to-amber-900 */}
       <div className="md:flex justify-between ">
         <h1 className="text-2xl font-bold font-serif text-gray-100">
@@ -64,7 +64,7 @@ const Category = () => {
           </span>
         </button> */}
         <button class="relative inline-flex items-center justify-center px-6 py-1 overflow-hidden font-bold text-white rounded-md shadow-2xl group">
-          <span class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-pink-600 via-purple-700 to-blue-400 group-hover:opacity-100"></span>
+          <span class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#871B58] to-[#FBAD30] group-hover:opacity-100"></span>
           {/* <!-- Top glass gradient --> */}
           <span class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
           {/* <!-- Bottom gradient --> */}
@@ -88,7 +88,7 @@ const Category = () => {
             <img
               src={each.img}
               alt={`category ${each.title}`}
-              className="h-24 w-24 2xl:h-28 2xl:w-28 object-cover group-hover:border-2 rounded-full border-white"
+              className="h-24 w-24 xl:h-28 xl:w-28 2xl:h-28 2xl:w-28 object-cover group-hover:border-2 rounded-full border-white"
             />
             {/* Title */}
             <p className="text-sm font-semibold text-nowrap group-hover:animate-bounce group-hover:font-bold text-white">
