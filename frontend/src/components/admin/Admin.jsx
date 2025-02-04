@@ -60,27 +60,80 @@ const Admin = () => {
       order.orderId.toString().includes(searchQuery)
   );
 
-  const handleAcceptOrders = async (order) => {
+  const handleAcceptOrders = async (order, product) => {
     try {
-      await addDoc(collection(db, "acceptedOrders"), order);
-      await deleteDoc(doc(db, "pendingProducts", order.id));
-      setPendingOrders(pendingOrders.filter((item) => item.id !== order.id));
-      setAcceptedOrder([...acceptedOrders, order]);
+      // Create a new order object containing only the accepted product
+      const newOrder = {
+        customername: order.customername,
+        email: order.email,
+        orderId: order.orderId,
+        orderDate: order.orderDate,
+        orderStatus: "accepted",
+        products: [{ ...product }], // Ensure only the selected product is added
+      };
+  
+      // Add the new accepted order with only the selected product
+      await addDoc(collection(db, "acceptedOrders"), newOrder);
+  
+      // Filter out the accepted product from the pending order
+      const updatedProducts = order.products.filter((p) => p.title !== product.title);
+  
+      if (updatedProducts.length === 0) {
+        // If all products have been accepted, remove the order from pendingProducts
+        await deleteDoc(doc(db, "pendingProducts", order.id));
+        setPendingOrders(pendingOrders.filter((o) => o.id !== order.id));
+      } else {
+        // Update pendingOrders state with remaining products
+        setPendingOrders((prevOrders) =>
+          prevOrders.map((o) =>
+            o.id === order.id ? { ...o, products: updatedProducts } : o
+          )
+        );
+      }
+  
+      setAcceptedOrder((prev) => [...prev, newOrder]); // Update accepted orders state
     } catch (error) {
-      console.error("Error accepting order: ", error);
+      console.error("Error accepting product:", error);
     }
   };
-
-  const handleRejectOrders = async (order) => {
+  
+  const handleRejectOrders = async (order, product) => {
     try {
-      await addDoc(collection(db, "rejectedOrders"), order); // Add order to rejectedOrders
-      await deleteDoc(doc(db, "pendingProducts", order.id)); // Remove from pendingProducts
-      setPendingOrders(pendingOrders.filter((o) => o.id !== order.id)); // Update UI
-      setRejectedOrders([...rejectedOrders, order]); // Update Rejected Orders state
+      // Create a new order object containing only the rejected product
+      const newOrder = {
+        customername: order.customername,
+        email: order.email,
+        orderId: order.orderId,
+        orderDate: order.orderDate,
+        orderStatus: "rejected",
+        products: [{ ...product }], // Ensure only the selected product is added
+      };
+  
+      // Add the new rejected order with only the selected product
+      await addDoc(collection(db, "rejectedOrders"), newOrder);
+  
+      // Filter out the rejected product from the pending order
+      const updatedProducts = order.products.filter((p) => p.title !== product.title);
+  
+      if (updatedProducts.length === 0) {
+        // If all products have been rejected, remove the order from pendingProducts
+        await deleteDoc(doc(db, "pendingProducts", order.id));
+        setPendingOrders(pendingOrders.filter((o) => o.id !== order.id));
+      } else {
+        // Update pendingOrders state with remaining products
+        setPendingOrders((prevOrders) =>
+          prevOrders.map((o) =>
+            o.id === order.id ? { ...o, products: updatedProducts } : o
+          )
+        );
+      }
+  
+      setRejectedOrders((prev) => [...prev, newOrder]); // Update rejected orders state
     } catch (error) {
-      console.error("Error rejecting order: ", error);
+      console.error("Error rejecting product:", error);
     }
   };
+  
 
   // Update the active tab and store it in localStorage
   const handleTabChange = (tab) => {
@@ -248,14 +301,14 @@ const Admin = () => {
                                   <button
                                     type="button"
                                     className="bg-green-500 text-sm py-1 text-white font-semibold px-2 rounded-lg"
-                                    onClick={() => handleAcceptOrders(order)}
+                                    onClick={() => handleAcceptOrders(order, product)}
                                   >
                                     Accept
                                   </button>
                                   <button
                                     type="button"
                                     className="bg-red-500 text-sm py-1 text-white font-semibold px-2 rounded-lg"
-                                    onClick={() => handleRejectOrders(order)}
+                                    onClick={() => handleRejectOrders(order, product)}
                                   >
                                     Reject
                                   </button>
