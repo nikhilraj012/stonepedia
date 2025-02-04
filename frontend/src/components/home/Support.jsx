@@ -24,7 +24,7 @@ const Support = () => {
       className="py-10 md:grid grid-cols-2 lg:grid-cols-4 md:justify-center"
     >
       <div className="text-center">
-        <h2 className="text-4xl font-bold text-gray-100">
+        <h2 className="text-4xl font-bold text-gray-900">
           <CountUp
             start={10000}
             end={1000000}
@@ -41,21 +41,21 @@ const Support = () => {
       </div>
 
       <div className="text-center">
-        <h2 className="text-4xl font-bold text-gray-100">
+        <h2 className="text-4xl font-bold text-gray-900">
           <CountUp start={0} end={2} duration={2.5} />
         </h2>
         <p className="text-gray-400 font-semibold">NATIONAL/GLOBALLY AWARD</p>
       </div>
 
       <div className="text-center">
-        <h2 className="text-4xl font-bold text-gray-100">
+        <h2 className="text-4xl font-bold text-gray-900">
           <CountUp start={0} end={20} duration={2.5} />+
         </h2>
         <p className="text-gray-400">PROJECT COMPLETED</p>
       </div>
 
       <div className="text-center">
-        <h2 className="text-4xl font-bold text-gray-100">
+        <h2 className="text-4xl font-bold text-gray-900">
           <CountUp start={0} end={99.9} duration={2.5} decimals={1} />%
         </h2>
         <p className="text-gray-400">CUSTOMER SATISFIED</p>

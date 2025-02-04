@@ -74,21 +74,21 @@ const ExclusiveDeals = () => {
   return (
     // bg-gray-900
     <div className="relative w-full min-h-[700px]  flex flex-col justify-center items-center">
-      <h2 className="text-[#FBAD30] font-serif text-2xl font-semibold mb-6">Exclusive Deals</h2>
+      <h2 className="text-[#871B58] font-serif text-2xl font-semibold mb-6">Exclusive Deals</h2>
 
       {/* Carousel Container */}
       <div className="relative w-[90%] max-w-7xl h-[500px] overflow-hidden flex items-center">
         {/* Left/Right Buttons */}
         <button
           onClick={handlePrev}
-          className="absolute z-10 left-8 transform -translate-x-1/2 bg-gray-700 hover:bg-gray-600 p-2 rounded-full text-white focus:outline-none"
+          className="absolute z-10 left-8 lg:left-64 transform -translate-x-1/2 bg-gray-700 hover:bg-gray-600 p-2 rounded-full text-white focus:outline-none"
         >
           &#8592;
         </button>
 
         <button
           onClick={handleNext}
-          className="absolute z-10 right-8 transform translate-x-1/2 bg-gray-700 hover:bg-gray-600 p-2 rounded-full text-white focus:outline-none"
+          className="absolute z-10 right-8 lg:right-64 transform translate-x-1/2 bg-gray-700 hover:bg-gray-600 p-2 rounded-full text-white focus:outline-none"
         >
           &#8594;
         </button>

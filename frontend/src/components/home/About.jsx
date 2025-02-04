@@ -70,8 +70,8 @@ const About = () => {
                 id="card"
                 className="w-full cursor-pointer rounded-lx p-4 group duration-600 ease-out transform bg-gray-900 text-white relative rounded-2xl shadow-md  flex flex-col justify-between transition-transform duration-500 hover:scale-105 before:absolute before:w-1/5 before:h-1/5 before:bg-gradient-to-tr before:from-[#FBAD30] before:to-[#871B58] before:transition-all before:duration-500 before:top-0 before:right-0 before:rounded-tr-[15px] before:rounded-bl-[100%] hover:before:w-full hover:before:h-full hover:before:rounded-[15px]  hover:after:w-full hover:after:h-full hover:after:rounded-[15px] "
               >
-                <div className=" relative md:h-40">
-                  <span>{course.icon}</span>
+                <div className=" relative md:h-40 flex justify-center items-center">
+                  {/* <span>{course.icon}</span> */}
                   <div className="my-2">
                     <h1 className="text-lg font-bold">{course.title}</h1>
                     <p className="text-white">{course.description}</p>

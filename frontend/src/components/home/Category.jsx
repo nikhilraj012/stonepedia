@@ -98,10 +98,10 @@ const Category = () => {
             <img
               src={each.img}
               alt={`category ${each.title}`}
-              className="h-24 w-24 xl:h-28 xl:w-28 2xl:h-28 2xl:w-28 object-cover group-hover:border-2 rounded-full border-white"
+              className="h-24 w-24 xl:h-28 xl:w-28 2xl:h-28 2xl:w-28 object-cover  group-hover:border-2 rounded-full border-[#FBAD30] " 
             />
             {/* Title */}
-            <p className="text-sm font-semibold text-nowrap group-hover:animate-bounce group-hover:font-bold text-white">
+            <p className="text-sm font-semibold text-nowrap group-hover:animate-bounce group-hover:font-bold text-black group-hover:text-[#FBAD30]">
               {each.title}
             </p>
           </div>

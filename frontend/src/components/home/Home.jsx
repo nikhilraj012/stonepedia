@@ -39,7 +39,7 @@ const images = [
 const Home = () => {
   return (
     <div>
-      <div className="bg-gray-200">
+      <div className="bg-gray-300">
         <LandingPage />
         <About />
         <Category />
