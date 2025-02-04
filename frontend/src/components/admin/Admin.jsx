@@ -38,7 +38,7 @@ const Admin = () => {
           return { id: doc.id, ...doc.data() };
         });
         setPendingOrders(ordersList);
-        // console.log("Pending Orders:", ordersList);
+        console.log("Pending Orders:", ordersList);
         setTimeout(() => {
           setLoading(false);
         }, 2000);
@@ -269,7 +269,7 @@ const Admin = () => {
                                 key={index}
                                 className="flex justify-between items-center py-2 bg-gray-100 my-2 rounded-lg p-3"
                               >
-                                <div className="flex gap-4 items-center">
+                                <div className="flex gap-4 ">
                                   <img
                                     src={product.imgUrl}
                                     alt={product.title}
@@ -279,6 +279,7 @@ const Admin = () => {
                                     <p className="font-semibold">
                                       {product.title}
                                     </p>
+                                    <p className="text-sm"><span className="font-semibold">ProductId :</span>  {product.productId}</p>
                                     <p className="text-gray-700 text-sm">
                                       <span className="font-semibold text-gray-950">
                                         Thickness:{" "}
@@ -297,6 +298,7 @@ const Admin = () => {
                                     </p>
                                   </div>
                                 </div>
+                                
                                 <div className="space-x-2">
                                   <button
                                     type="button"

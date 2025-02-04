@@ -75,7 +75,10 @@ const RejectedOrders = () => {
           </div>
         ) : filteredOrders.length > 0 ? (
           filteredOrders.map((order) => (
-            <div key={order.id} className="border p-3 border-gray-100 shadow-md rounded-lg my-3">
+            <div
+              key={order.id}
+              className="border p-3 border-gray-100 shadow-md rounded-lg my-3"
+            >
               <div className="flex justify-between items-center">
                 <div className="w-80">
                   <p className="font-semibold">Name: {order.customername}</p>
@@ -104,33 +107,49 @@ const RejectedOrders = () => {
                       {order.products.map((product, index) => (
                         <li
                           key={index}
-                          className="flex justify-between items-center py-2 bg-gray-100 my-2 rounded-lg p-3"
+                          className="flex justify-between  py-2 bg-gray-100 my-2 rounded-lg p-3"
                         >
-                          <div className="flex gap-4 items-center">
+                          <div className="flex gap-4">
                             <img
                               src={product.imgUrl}
                               alt={product.title}
                               className="h-16 w-16 rounded-lg border"
                             />
                             <div>
-                              <p className="font-semibold">{product.title}</p>
-                              <p className="text-gray-700 text-sm">
+                              <p className="font-semibold text-gray-700">
                                 <span className="font-semibold text-gray-950">
-                                  Thickness:{" "}
-                                </span>
-                                {product.thickness}mm,
-                                <span className="font-semibold text-gray-950">
-                                  Finish:{" "}
-                                </span>
-                                {product.finish},
+                                  Name :
+                                </span>{" "}
+                                {product.title}
                               </p>
-                              <p className="text-gray-700 text-sm">
-                                <span className="font-semibold text-gray-950">
-                                  Value:{" "}
-                                </span>
-                                {product.value}
+                              <p className="text-sm">
+                                <span className="font-semibold">
+                                  ProductId :
+                                </span>{" "}
+                                {product.productId}
                               </p>
                             </div>
+                          </div>
+                          <div>
+                            <p className="text-gray-700 text-sm">
+                              <span className="font-semibold text-gray-950">
+                                Thickness:{" "}
+                              </span>
+                              {product.thickness}mm
+                            </p>
+                            <p className="text-gray-700 text-sm">
+                              <span className="font-semibold text-gray-950">
+                                Finish:{" "}
+                              </span>
+                              {product.finish}
+                            </p>
+
+                            <p className="text-gray-700 text-sm">
+                              <span className="font-semibold text-gray-950">
+                                Value:{" "}
+                              </span>
+                              {product.value}
+                            </p>
                           </div>
                         </li>
                       ))}

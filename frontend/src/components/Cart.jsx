@@ -45,6 +45,7 @@ const Cart = () => {
         email: auth.currentUser.email,
         orderStatus: "pending",
         products: cartItems.map((eachProduct) => ({
+          productId : eachProduct.id,
           imgUrl: eachProduct.imgUrl,
           title: eachProduct.title,
           thickness: eachProduct.thickness,

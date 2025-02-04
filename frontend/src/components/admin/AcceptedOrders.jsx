@@ -5,7 +5,6 @@ import { db } from "../firebase/firebase";
 import { Puff } from "react-loader-spinner";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-
 const AcceptedOrders = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [acceptedOrders, setAcceptedOrders] = useState([]);
@@ -22,6 +21,7 @@ const AcceptedOrders = () => {
           ...doc.data(),
         }));
         setAcceptedOrders(ordersList);
+        console.log("Accepted Orders: ", ordersList);
 
         setTimeout(() => {
           setLoading(false);
@@ -108,33 +108,47 @@ const AcceptedOrders = () => {
                       {order.products.map((product, index) => (
                         <li
                           key={index}
-                          className="flex justify-between items-center py-2 bg-gray-100 my-2 rounded-lg p-3"
+                          className="flex justify-between  py-2 bg-gray-100 my-2 rounded-lg p-3"
                         >
-                          <div className="flex gap-4 items-center">
+                          <div className="flex gap-4">
                             <img
                               src={product.imgUrl}
                               alt={product.title}
                               className="h-16 w-16 rounded-lg border"
                             />
                             <div>
-                              <p className="font-semibold">{product.title}</p>
-                              <p className="text-gray-700 text-sm">
-                                <span className="font-semibold text-gray-950">
-                                  Thickness:{" "}
-                                </span>
-                                {product.thickness}mm,
-                                <span className="font-semibold text-gray-950">
-                                  Finish:{" "}
-                                </span>
-                                {product.finish},
+                              <p className="font-semibold text-gray-700">
+                                <span className="font-semibold text-gray-950">Name :</span>{" "}
+                                {product.title}
                               </p>
-                              <p className="text-gray-700 text-sm">
-                                <span className="font-semibold text-gray-950">
-                                  Value:{" "}
-                                </span>
-                                {product.value}
+                              <p className="text-sm">
+                                <span className="font-semibold">
+                                  ProductId :
+                                </span>{" "}
+                                {product.productId}
                               </p>
                             </div>
+                          </div>
+                          <div>
+                            <p className="text-gray-700 text-sm">
+                              <span className="font-semibold text-gray-950">
+                                Thickness:{" "}
+                              </span>
+                              {product.thickness}mm
+                            </p>
+                            <p className="text-gray-700 text-sm">
+                              <span className="font-semibold text-gray-950">
+                                Finish:{" "}
+                              </span>
+                              {product.finish}
+                            </p>
+
+                            <p className="text-gray-700 text-sm">
+                              <span className="font-semibold text-gray-950">
+                                Value:{" "}
+                              </span>
+                              {product.value}
+                            </p>
                           </div>
                         </li>
                       ))}
