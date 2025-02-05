@@ -182,7 +182,7 @@ const LandingPage = () => {
         </div>
 
         {/* Carousel Block (placed below the content) */}
-        <div className="mt-8 w-full px-5">
+        <div className="mt-8 lg:mt-20 w-full px-12 md:px-20 xl:px-40 2xl:px-60">
           <div className="relative w-full">
             <div className="overflow-hidden w-full">
               <div
@@ -207,7 +207,7 @@ const LandingPage = () => {
             <button
               onClick={handlePrev}
               disabled={carouselIndex === 0}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 px-2 py-1 bg-gray-200 rounded-full disabled:opacity-50"
+              className="absolute -left-8 top-1/2 transform -translate-y-1/2 px-2 py-1 bg-gray-200 rounded-full disabled:opacity-50"
             >
               {"<"}
             </button>
@@ -215,7 +215,7 @@ const LandingPage = () => {
             <button
               onClick={handleNext}
               disabled={carouselIndex >= countryImages.length - visibleCount}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 px-2 py-1 bg-gray-200 rounded-full disabled:opacity-50"
+              className="absolute -right-8 top-1/2 transform -translate-y-1/2 px-2 py-1 bg-gray-200 rounded-full disabled:opacity-50"
             >
               {">"}
             </button>
