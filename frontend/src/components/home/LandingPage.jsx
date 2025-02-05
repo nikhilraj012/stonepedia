@@ -45,10 +45,10 @@ const LandingPage = () => {
   const [carouselIndex, setCarouselIndex] = useState(0);
 
   // Determine visible count based on window width:
-  // For sm devices (<768px): 2 images; md: 5; lg: 7; xl: 10.
+  // For sm devices (<768px): 3 images; md: 5; lg: 7; xl: 10.
   const [visibleCount, setVisibleCount] = useState(() => {
     const w = window.innerWidth;
-    if (w < 768) return 3; // 2 images in sm devices
+    if (w < 768) return 3;
     else if (w < 1024) return 5;
     else if (w < 1280) return 7;
     else return 10;
@@ -103,8 +103,6 @@ const LandingPage = () => {
     setCarouselIndex((prev) => Math.min(prev + 2, maxIndex));
   };
 
-  // Each item occupies 100/visibleCount % of the container.
-  // The container is translated by (carouselIndex * 100/visibleCount)%.
   const translatePercentage = (carouselIndex * 100) / visibleCount;
 
   return (
@@ -184,7 +182,7 @@ const LandingPage = () => {
         </div>
 
         {/* Carousel Block (placed below the content) */}
-        <div className="mt-8 w-full px-2 ">
+        <div className="mt-8 w-full px-5">
           <div className="relative w-full">
             <div className="overflow-hidden w-full">
               <div
@@ -209,7 +207,7 @@ const LandingPage = () => {
             <button
               onClick={handlePrev}
               disabled={carouselIndex === 0}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-200 rounded-full disabled:opacity-50"
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 px-2 py-1 bg-gray-200 rounded-full disabled:opacity-50"
             >
               {"<"}
             </button>
@@ -217,7 +215,7 @@ const LandingPage = () => {
             <button
               onClick={handleNext}
               disabled={carouselIndex >= countryImages.length - visibleCount}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-200 rounded-full disabled:opacity-50"
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 px-2 py-1 bg-gray-200 rounded-full disabled:opacity-50"
             >
               {">"}
             </button>
