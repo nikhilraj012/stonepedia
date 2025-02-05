@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ImArrowRight2 } from "react-icons/im";
 
 const Blogs = () => {
@@ -60,11 +60,18 @@ const Blogs = () => {
     },
   ];
 
-  const handleImageClick = (id) => {
-    if (selectedImage !== id) {
-      setSelectedImage(id);
-    }
-  };
+  // const handleImageClick = (id) => {
+  //   if (selectedImage !== id) {
+  //     setSelectedImage(id);
+  //   }
+  // };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSelectedImage((prev) => (prev % blogs.length) + 1);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="2xl:px-40">
@@ -121,7 +128,7 @@ const Blogs = () => {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
-              onClick={() => handleImageClick(image.id)}
+              // onClick={() => handleImageClick(image.id)}
             >
               {selectedImage === image.id && (
                 <div className="absolute text-white bg-black/50 rounded-lg bottom-4 w-full p-2">

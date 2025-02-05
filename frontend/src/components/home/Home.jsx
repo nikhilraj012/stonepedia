@@ -39,14 +39,14 @@ const images = [
 const Home = () => {
   return (
     <div>
-      <div className="bg-gray-300">
+      <div className="">
         <LandingPage />
         <About />
         <Category />
         <ExclusiveDeals />
         <Support />
         <News />
-        <Steps />
+        {/* <Steps /> */}
       </div>
       {/* <div className="bg-gradient-to-tr from-[#080d11] via-gray-700 to-amber-600"> */}
         <Clients />

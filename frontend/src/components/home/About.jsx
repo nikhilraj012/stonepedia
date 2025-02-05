@@ -48,18 +48,18 @@ const About = () => {
 
   return (
     <div
-      className="bg-cover bg-center  relative py-5 "
+      className="bg-cover bg-center  relative py-5 md:px-10 xl:px-24 2xl:px-48 bg-gray-200"
       // bg-gradient-to-br from-amber-900 via-gray-700 to-gray-900
     >
       <div className="relative flex flex-col justify-center items-center text-center space-y-4 px-4">
         <p className="text-sm md:text-lg font-semibold text-[#FBAD30]">
           REDEFINING STONE SOURCING
         </p>
-        <h1 className="text-2xl md:text-4xl font-serif text-[#871B58]">
+        <h1 className="text-xl md:text-3xl lg:text-4xl font-serif text-[#871B58]">
           Why <span className="">StonePedia</span>?
         </h1>
 
-        <div className="flex justify-center md:px-10 xl:px-24">
+        <div className="flex justify-center ">
           <div
             id="maindiv"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-9 gap-4 justify-center items-center"
@@ -74,7 +74,7 @@ const About = () => {
                   {/* <span>{course.icon}</span> */}
                   <div className="my-2">
                     <h1 className="text-lg font-bold">{course.title}</h1>
-                    <p className="text-white">{course.description}</p>
+                    <p className="text-white text-sm">{course.description}</p>
                   </div>
                 </div>
               </div>

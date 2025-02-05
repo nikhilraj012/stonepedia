@@ -21,7 +21,7 @@ const Support = () => {
       whileInView={{ opacity: 1, x: 0 }}
       initial={{ opacity: 0, x: -100 }}
       transition={{ duration: 1.5 }}
-      className="py-10 md:grid grid-cols-2 lg:grid-cols-4 md:justify-center"
+      className=" md:grid grid-cols-2 gap-4 lg:grid-cols-4 md:justify-center"
     >
       <div className="text-center">
         <h2 className="text-4xl font-bold text-gray-900">

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
 
 // const iconVariants = (duration) => ({
 //   initial: { y: -10 },
@@ -34,12 +35,10 @@ const images = [
   "https://stonepedia.in/wp-content/uploads/2024/10/૧-16.png",
   "https://stonepedia.in/wp-content/uploads/2024/10/૧-06.png",
   "https://stonepedia.in/wp-content/uploads/2024/10/૧-04.png",
-  "https://stonepedia.in/wp-content/uploads/2024/10/૧-05.png"
+  "https://stonepedia.in/wp-content/uploads/2024/10/૧-05.png",
 ];
 
 const Clients = () => {
-
-
   return (
     // <div className="pb-10 md:pb-16 md:py-4 2xl:px-40">
     //   <motion.h2
@@ -249,7 +248,15 @@ const Clients = () => {
     //   </motion.div>
     // </div>
     <div className="my-16 mx-10 xl:mx-20 2xl:mx-40">
-      <Marquee speed={40} gradient={true} gradientWidth={150} >
+      <motion.h2
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1.5 }}
+        className="my-10 text-center text-4xl font-serif text-[#871B58]"
+      >
+        Our Valuable Clients
+      </motion.h2>
+      <Marquee speed={40} gradient={true} gradientWidth={150}>
         {images.map((image, index) => (
           <img
             key={index}

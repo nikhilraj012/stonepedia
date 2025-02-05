@@ -51,10 +51,10 @@ const Category = () => {
     },
   ];
   return (
-    <div className="px-5 md:px-10 pt-5 xl:px-28 2xl:px-36">
+    <div className="px-5 md:px-14 pt-5 xl:px-28 2xl:px-52">
       {/* bg-gradient-to-br from-amber-300 via-gray-700 to-amber-900 */}
-      <div className="md:flex justify-between ">
-        <h1 className="text-2xl font-bold font-serif text-[#871B58]">
+      <div className="space-y-2 md:flex justify-between ">
+        <h1 className="text-xl md:text-2xl font-bold font-serif text-[#871B58]">
           Choose By Category
         </h1>
         {/* <button className="flex items-center gap-2 border px-2 my-1 font-semibold rounded-md hover:border-white bg-yellow-300 hover:bg-pink-700 hover:text-white">
@@ -88,11 +88,11 @@ const Category = () => {
           </span>
         </a>
       </div>
-      <div className="py-5 grid grid-cols-2 md:grid-cols-6 xl:grid-cols-9 gap-y-5 place-items-center xl:px-16">
+      <div className="py-5 grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-9 gap-y-5 place-items-center">
         {category.map((each) => (
           <div
             key={each.id}
-            className="w-28 h-32 2xl:w-32 2xl:h-36 flex flex-col items-center gap-2 cursor-pointer group"
+            className="flex flex-col items-center gap-2 cursor-pointer group"
           >
             {/* Image */}
             <img

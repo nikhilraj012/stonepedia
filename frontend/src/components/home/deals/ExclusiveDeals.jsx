@@ -46,7 +46,6 @@ const itemsData = [
   },
 ];
 
-
 const ExclusiveDeals = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -73,11 +72,11 @@ const ExclusiveDeals = () => {
 
   return (
     // bg-gray-900
-    <div className="relative w-full min-h-[700px]  flex flex-col justify-center items-center">
-      <h2 className="text-[#871B58] font-serif text-2xl font-semibold mb-6">Exclusive Deals</h2>
+    <div className="relative w-full min-h-[700px]  flex flex-col justify-center items-center px-5 xl:px-10 2xl:px-32 bg-gray-200">
+      <h2 className="text-[#871B58] font-serif text-xl md:text-2xl font-semibold mb-6">Exclusive Deals</h2>
 
       {/* Carousel Container */}
-      <div className="relative w-[90%] max-w-7xl h-[500px] overflow-hidden flex items-center">
+      <div className="relative w-[90%] max-xl:w-7xl h-[500px] overflow-hidden flex items-center">
         {/* Left/Right Buttons */}
         <button
           onClick={handlePrev}
