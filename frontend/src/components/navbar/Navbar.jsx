@@ -54,7 +54,7 @@ const Navbar = () => {
     <div
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled || isNotHome || isHovered
-          ? "bg-gray-200 shadow-md"
+          ? "bg-white shadow-md"
           : "bg-transparent"
       }`}
     >
