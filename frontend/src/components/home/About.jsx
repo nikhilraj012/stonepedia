@@ -10,76 +10,95 @@ const About = () => {
   const courseData = [
     {
       title: "Rigorous Quality Control",
-      icon: <FaCheckDouble size={20} />,
+      icon: <FaCheckDouble size={32} className="text-[#FBAD30]" />,
       description:
         "Multi-level inspections ensure every stone meets the highest durability and aesthetic standards.",
     },
     {
       title: "Certified Suppliers & Compliance",
-      icon: <MdContactEmergency size={20} />,
+      icon: <MdContactEmergency size={32} className="text-[#FBAD30]" />,
       description:
         "Sourced from certified suppliers, every stone complies with global and local regulations.",
     },
     {
       title: "Expert Guidance and Support",
-      icon: <IoIosContact size={20} />,
+      icon: <IoIosContact size={32} className="text-[#FBAD30]" />,
       description:
         "StonePedia’s specialists provide expert advice on material selection, application, and maintenance.",
     },
     {
       title: "Comprehensive High-Quality Stones",
-      icon: <GiStoneSphere size={20} />,
+      icon: <GiStoneSphere size={32} className="text-[#FBAD30]" />,
       description:
         "Reliable, on-time delivery of stones directly to your project site, ensuring seamless logistics.",
     },
     {
       title: "Doorstep Delivery",
-      icon: <FaHome size={20} />,
+      icon: <FaHome size={32} className="text-[#FBAD30]" />,
       description:
         "Reliable, on-time delivery of stones directly to your project site, ensuring seamless logistics.",
     },
     {
       title: "Guaranteed Order Fulfillment",
-      icon: <IoDocumentTextOutline size={20} />,
+      icon: <IoDocumentTextOutline size={32} className="text-[#FBAD30]" />,
       description:
         "Accurate and timely order processing to meet all project timelines without delays.",
     },
   ];
 
   return (
-    <div
-      className="bg-cover bg-center  relative py-5 md:px-10 xl:px-24 2xl:px-48 bg-gray-200"
-      // bg-gradient-to-br from-amber-900 via-gray-700 to-gray-900
-    >
-      <div className="relative flex flex-col justify-center items-center text-center space-y-4 px-4">
-        <p className="text-sm md:text-lg font-semibold text-[#FBAD30]">
-          REDEFINING STONE SOURCING
-        </p>
-        <h1 className="text-xl md:text-3xl lg:text-4xl font-serif text-[#871B58]">
-          Why <span className="">StonePedia</span>?
-        </h1>
+    <div className="bg-gradient-to-b from-gray-800 to-black py-16 px-4 md:px-12 lg:px-24">
+      {/* Custom CSS for a 360° spin on hover */}
+      <style>{`
+        .group:hover .spin-icon {
+          animation: spin360 0.5s ease-in-out;
+        }
+        @keyframes spin360 {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
+      
+      <div className="max-w-5xl mx-auto">
+        {/* Section Heading */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-white">
+            Why <span className="text-[#FBAD30]">StonePedia</span>?
+          </h1>
+          <p className="text-gray-400 mt-4">
+            Discover our core strengths that make us the leading stone sourcing partner.
+          </p>
+        </div>
 
-        <div className="flex justify-center ">
-          <div
-            id="maindiv"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-9 gap-4 justify-center items-center"
-          >
-            {courseData.map((course, index) => (
+        {/* Alternating (zig-zag) layout with hover effects */}
+        <div className="space-y-16">
+          {courseData.map((course, index) => {
+            // Alternate layout: even indexes have the icon on the left, odd on the right.
+            const isEven = index % 2 === 0;
+            return (
               <div
                 key={index}
-                id="card"
-                className="w-full cursor-pointer rounded-lx p-4 group duration-600 ease-out transform bg-gray-900 text-white relative rounded-2xl shadow-md  flex flex-col justify-between transition-transform duration-500 hover:scale-105 before:absolute before:w-1/5 before:h-1/5 before:bg-gradient-to-tr before:from-[#FBAD30] before:to-[#871B58] before:transition-all before:duration-500 before:top-0 before:right-0 before:rounded-tr-[15px] before:rounded-bl-[100%] hover:before:w-full hover:before:h-full hover:before:rounded-[15px]  hover:after:w-full hover:after:h-full hover:after:rounded-[15px] "
+                className={`group flex flex-col md:flex-row items-center transition-transform duration-500 hover:scale-105 ${
+                  isEven ? "md:flex-row" : "md:flex-row-reverse"
+                }`}
               >
-                <div className=" relative md:h-40 flex justify-center items-center">
-                  {/* <span>{course.icon}</span> */}
-                  <div className="my-2">
-                    <h1 className="text-lg font-bold">{course.title}</h1>
-                    <p className="text-white text-sm">{course.description}</p>
+                <div className="md:w-1/2 flex justify-center">
+                  {/* Icon container with custom 'spin-icon' class */}
+                  <div className="spin-icon w-32 h-32 rounded-full bg-gray-700 border-4 border-[#FBAD30] flex items-center justify-center transition-transform duration-500">
+                    {course.icon}
                   </div>
                 </div>
+                <div className="md:w-1/2 mt-6 md:mt-0 px-6 text-center md:text-left">
+                  <h2 className="text-2xl font-semibold text-white transition-colors duration-500 group-hover:text-[#FBAD30]">
+                    {course.title}
+                  </h2>
+                  <p className="mt-3 text-gray-300 transition-colors duration-500 group-hover:text-gray-200">
+                    {course.description}
+                  </p>
+                </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
     </div>
