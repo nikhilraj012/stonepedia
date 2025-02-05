@@ -11,6 +11,7 @@ import Testimonials from "./Testimonials";
 import LandingPage from "./LandingPage";
 import ExclusiveDeals from "./deals/ExclusiveDeals";
 import Steps from "./steps/Steps";
+import GettingStarted from "./GettingStarted";
 
 const images = [
   {
@@ -46,10 +47,11 @@ const Home = () => {
         <ExclusiveDeals />
         <Support />
         <News />
-        <Steps />
+        {/* <Steps /> */}
       </div>
       {/* <div className="bg-gradient-to-tr from-[#080d11] via-gray-700 to-amber-600"> */}
         <Clients />
+        <GettingStarted />
         <Blogs />
         <Testimonials />
       {/* </div> */}
