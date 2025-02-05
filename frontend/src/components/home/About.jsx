@@ -49,9 +49,9 @@ const About = () => {
   return (
     <div
       className="relative bg-cover bg-center py-16 px-4 md:px-12 lg:px-24 bg-gray-300"
-      // style={{ backgroundImage: 'url("src/assets/back.jpg")' }}
+      style={{ backgroundImage: 'url("src/assets/abcd.jpg")' }}
     >
-      {/* <div className="absolute inset-0 bg-white opacity-70 z-0"></div> */}
+      <div className="absolute inset-0 bg-white opacity-70 z-0"></div>
 
       <style>{`
         .group:hover .spin-icon {
@@ -84,7 +84,7 @@ const About = () => {
                 }`}
               >
                 <div className="md:w-1/2 flex justify-center">
-                  <div className="spin-icon w-32 h-32 rounded-full bg-[#6F431A] border-4 border-[#FBAD30] flex items-center justify-center transition-transform duration-500">
+                  <div className="spin-icon w-32 h-32 rounded-full bg-white border-4 border-[#871B58] flex items-center justify-center transition-transform duration-500">
                     {course.icon}
                   </div>
                 </div>
