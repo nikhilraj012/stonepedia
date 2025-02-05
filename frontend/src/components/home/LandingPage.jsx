@@ -159,7 +159,7 @@ const LandingPage = () => {
                     onChange={handleImageUpload}
                   />
                 </div>
-                <button className="bg-[#871B58] flex items-center gap-2 p-1 lg:p-3 rounded-full text-white font-semibold">
+                <button className="bg-[#FBAD30] flex items-center gap-2 p-1 lg:p-3 rounded-full text-white font-semibold">
                   <span>
                     <IoSearch className="text-lg md:text-xl lg:text-2xl" />
                   </span>

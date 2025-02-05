@@ -48,7 +48,7 @@ const News = () => {
   ];
 
   return (
-    <div className="m-5 md:mx-10 xl:px-20 2xl:px-40">
+    <div className="p-5 md:px-10 xl:px-20 2xl:px-40 bg-gray-200">
       {/* Header Section */}
       <div className="md:flex justify-between">
         <motion.h1

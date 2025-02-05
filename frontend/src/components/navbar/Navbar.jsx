@@ -172,7 +172,7 @@ const Navbar = () => {
               <a
                 href="#"
                 onClick={handleLogOut}
-                class="relative p-2 overflow-hidden font-medium text-gray-100 bg-[#FBAD30] rounded-lg shadow-inner group"
+                class="relative p-2 overflow-hidden font-medium text-gray-100 bg-[#871B58] rounded-lg shadow-inner group"
               >
                 <span class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-pink-600 group-hover:w-full ease"></span>
                 <span class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-pink-600 group-hover:w-full ease"></span>

@@ -74,7 +74,7 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div className="2xl:px-40">
+    <div className="2xl:px-40 bg-gray-200">
       <div className="md:flex justify-between items-center p-5 max-md:space-y-2 md:px-10">
         <h1 className="text-lg font-serif md:text-xl lg:text-2xl font-bold text-[#871B58]">
           Watch Our Latest Blog
