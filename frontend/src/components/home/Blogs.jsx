@@ -68,15 +68,14 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div className="2xl:px-40 bg-gray-200">
-      <div className="md:flex justify-between items-center p-5 max-md:space-y-2 md:px-10">
+    <div className="bg-gray-200 p-5 md:p-10 lg:py-14 xl:px-40">
+      <div className="md:flex justify-between items-center max-md:space-y-2">
         <h1 className="text-lg font-serif md:text-xl lg:text-2xl font-bold text-[#871B58]">
           Watch Our Latest Blog
         </h1>
 
-        <a
-          href="#_"
-          className="relative inline-flex items-center justify-center p-4 px-6 py-1 overflow-hidden font-medium text-[#FBAD30] transition duration-300 ease-out border-2 border-orange-300 rounded-full shadow-md group"
+        <button type="button"
+          className="relative inline-flex items-center justify-center p-2  xl:p-2 xl:px-6 py-1 overflow-hidden text-nowrap font-medium text-[#FBAD30] transition duration-300 ease-out border-2 border-orange-300 rounded-full shadow-md group"
         >
           <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-orange-300 group-hover:translate-x-0 ease">
             <ImArrowRight2 className="w-6 h-6" />
@@ -85,18 +84,18 @@ const Blogs = () => {
             VIEW MORE
           </span>
           <span className="relative invisible">Button Text</span>
-        </a>
+        </button>
       </div>
 
-      <div className="flex items-center justify-center mb-5">
+      <div className="flex items-center justify-center py-5 lg:pt-10">
         <div className="flex gap-x-1">
           {blogs.map((image) => (
             <div
               key={image.id}
               className={`relative rounded-lg transition-all duration-300 cursor-pointer overflow-hidden shadow-lg ${
                 selectedImage === image.id
-                  ? "w-[100px] h-[180px] md:h-[200px] lg:h-[300px] md:w-[240px] lg:w-[300px] xl:w-[400px] flex-shrink-0"
-                  : "w-[24px] h-[180px] md:h-[200px] lg:h-[300px] md:w-[50px] lg:w-[80px] xl:w-[100px] flex-shrink-0"
+                  ? "w-[100px] h-[180px] md:h-[200px] lg:h-[300px] md:w-[240px] lg:w-[300px] xl:w-[560px]  flex-shrink-0"
+                  : "w-[24px] h-[180px] md:h-[200px] lg:h-[300px] md:w-[50px] lg:w-[80px] xl:w-[120px] flex-shrink-0"
               }`}
               style={{
                 backgroundImage: `url(${image.imgUrl})`,

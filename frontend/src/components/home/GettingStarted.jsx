@@ -9,7 +9,7 @@ const GettingStarted = () => {
         <h1 className="text-2xl xl:text-5xl text-white font-serif font-bold">Ready to get started?</h1>
         <p className="text-gray-200 xl:text-xl">
           Explore millions of granites and marbles from trusted suppliers by
-          signing up today!
+          signing up today!!
         </p>
         <button className="bg-[#FBAD30] text-white font-semibold py-1 px-4 xl:px-6 xl:py-2 rounded shadow-lg transition">
           Signup

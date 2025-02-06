@@ -21,9 +21,9 @@ const Support = () => {
       whileInView={{ opacity: 1, x: 0 }}
       initial={{ opacity: 0, x: -100 }}
       transition={{ duration: 1.5 }}
-      className=" md:grid grid-cols-2 gap-4 lg:grid-cols-4 md:justify-center my-5 md:my-10"
+      className=" md:grid grid-cols-2 gap-4 lg:grid-cols-4 md:justify-center py-5 md:py-10 lg:p-20"
     >
-      <div className="text-center">
+      <div className="text-center space-y-2">
         <h2 className="text-4xl font-bold text-gray-900">
           <CountUp
             start={10000}
@@ -40,21 +40,21 @@ const Support = () => {
         <p className="text-gray-400">SQ FT STONE DELIVERED</p>
       </div>
 
-      <div className="text-center">
+      <div className="text-center space-y-2">
         <h2 className="text-4xl font-bold text-gray-900">
-          <CountUp start={0} end={2} duration={2.5} />
+          <CountUp start={0} end={2} duration={4.5} />
         </h2>
-        <p className="text-gray-400 font-semibold">NATIONAL/GLOBALLY AWARD</p>
+        <p className="text-gray-400 text-nowrap">NATIONAL/GLOBALLY AWARD</p>
       </div>
 
-      <div className="text-center">
+      <div className="text-center space-y-2">
         <h2 className="text-4xl font-bold text-gray-900">
-          <CountUp start={0} end={20} duration={2.5} />+
+          <CountUp start={0} end={20} duration={4.5} />+
         </h2>
         <p className="text-gray-400">PROJECT COMPLETED</p>
       </div>
 
-      <div className="text-center">
+      <div className="text-center space-y-2">
         <h2 className="text-4xl font-bold text-gray-900">
           <CountUp start={0} end={99.9} duration={2.5} decimals={1} />%
         </h2>

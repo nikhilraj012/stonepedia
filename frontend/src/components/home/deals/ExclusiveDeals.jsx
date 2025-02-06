@@ -72,8 +72,15 @@ const ExclusiveDeals = () => {
 
   return (
     // bg-gray-900
-    <div className="relative w-full min-h-[700px]  flex flex-col justify-center items-center px-5 xl:px-10 2xl:px-32 bg-gray-200">
-      <h2 className="text-[#871B58] font-serif text-xl md:text-2xl font-semibold mb-6">Exclusive Deals</h2>
+    <div
+      className="relative w-full min-h-[700px] bg-center bg-cover  flex flex-col justify-center items-center px-5 xl:px-10 2xl:px-32 "
+      style={{ backgroundImage: 'url("src/assets/ground.jpg")' }}
+    >
+      <div className="absolute inset-0 bg-white opacity-50 z-0"></div>
+
+      <h2 className="text-[#871B58] font-serif text-xl md:text-2xl font-semibold mb-6">
+        Exclusive Deals
+      </h2>
 
       {/* Carousel Container */}
       <div className="relative w-[90%] max-xl:w-7xl h-[500px] overflow-hidden flex items-center">
@@ -95,10 +102,12 @@ const ExclusiveDeals = () => {
         {/* 4-Column Grid */}
         <div className="grid grid-cols-4 w-full h-full gap-4 relative">
           {visibleItems.map((item, i) => {
-            // The middle two columns (indices 1 and 2) are fully opaque; 
+            // The middle two columns (indices 1 and 2) are fully opaque;
             // The outer columns (0, 3) are half opaque to achieve the partial look.
             const isCenter = i === 1 || i === 2;
-            const cardOpacity = isCenter ? "opacity-100" : "opacity-50 scale-90";
+            const cardOpacity = isCenter
+              ? "opacity-100"
+              : "opacity-50 scale-90";
 
             return (
               <div

@@ -105,7 +105,7 @@ const LandingPage = () => {
   const translatePercentage = (carouselIndex * 100) / visibleCount;
 
   return (
-    <div className="relative h-screen xl:h-[70vh]">
+    <div className="relative h-screen lg:h-[80vh]">
       {/* Background Image */}
       <img
         src="/stonepedia_img.webp"

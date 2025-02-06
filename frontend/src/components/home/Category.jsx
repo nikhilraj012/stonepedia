@@ -51,48 +51,26 @@ const Category = () => {
     },
   ];
   return (
-    <div className="px-5 md:px-14 pt-5 xl:px-28 2xl:px-52">
+    <div className="p-5 md:p-14 pt-5 xl:px-28 2xl:px-52 md:space-y-2 lg:space-y-4">
       {/* bg-gradient-to-br from-amber-300 via-gray-700 to-amber-900 */}
-      <div className="space-y-2 md:flex justify-between ">
-        <h1 className="text-xl md:text-2xl font-bold font-serif text-[#871B58]">
+      <div className="flex justify-between items-center">
+        <h1 className="text-md md:text-2xl font-bold font-serif text-[#871B58]">
           Choose By Category
         </h1>
-        {/* <button className="flex items-center gap-2 border px-2 my-1 font-semibold rounded-md hover:border-white bg-yellow-300 hover:bg-pink-700 hover:text-white">
-          VIEW MORE
-          <span>
-            <FaArrowRightLong />
-          </span>
-        </button> */}
-        {/* <button class="relative inline-flex items-center justify-center px-6 py-1 overflow-hidden font-bold text-[#FBAD30]  rounded-md shadow-2xl group">
-          <span class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#871B58] to-[#FBAD30] group-hover:opacity-100"></span>
-          <!-- Top glass gradient -->
-          <span class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
-          <!-- Bottom gradient -->
-          <span class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
-          <!-- Left gradient -->
-          <span class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
-          <!-- Right gradient -->
-          <span class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
-          <span class="absolute inset-0 w-full h-full border border-white rounded-md opacity-10"></span>
-          <span class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
-          <span class="relative">VIEW MORE</span>
-        </button> */}
-
-        <a
-          href="#_"
-          class="relative inline-flex items-center justify-start px-6 py-1 overflow-hidden font-medium transition-all border-2 border-[#871B58] bg-white rounded hover:bg-white group"
+        <button type="button"
+          class="relative inline-flex items-center justify-start md:px-6 p-1 overflow-hidden text-sm font-medium transition-all border-2 border-[#871B58] bg-white rounded hover:bg-white group"
         >
           <span class="w-48 h-48 rounded rotate-[-40deg] bg-[#871B58] absolute bottom-0 left-0 -translate-x-full ease-out duration-700 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
           <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">
             VIEW MORE
           </span>
-        </a>
+        </button>
       </div>
-      <div className="py-5 grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-9 gap-y-5 place-items-center">
+      <div className="py-5 grid grid-cols-2 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-9 gap-y-8 place-items-center">
         {category.map((each) => (
           <div
             key={each.id}
-            className="flex flex-col items-center gap-2 cursor-pointer group"
+            className="flex flex-col items-center gap-2 lg:gap-4 cursor-pointer group"
           >
             {/* Image */}
             <img
