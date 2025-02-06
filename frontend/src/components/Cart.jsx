@@ -13,7 +13,6 @@ const Cart = () => {
     removeFromCart,
     clearCart,
     updateCartItemQuantity,
-    setPlacedOrders,
   } = useCart();
   const navigate = useNavigate();
 
@@ -35,6 +34,7 @@ const Cart = () => {
 
       // Create a new order object that contains all products in the cart
       const orderData = {
+        uid: auth.currentUser.uid, 
         orderId: Math.floor(Math.random() * 100000),
         orderDate: (() => {
           const now = new Date();
@@ -64,8 +64,15 @@ const Cart = () => {
       // Save the order in Firebase under "pendingProducts"
       await addDoc(collection(db, "pendingProducts"), orderData);
 
+      //  ALSO save the same order to user’s "Orders" subcollection
+      //    If "Orders" doesn't exist yet, this automatically creates it once we add the doc.
+      await addDoc(
+        collection(db, "Users", auth.currentUser.uid, "Orders"),
+        orderData
+      );
+
       // Store the order data in Cart Provider state for quick access
-      setPlacedOrders(prevOrders => [...prevOrders, orderData]);
+      // setPlacedOrders((prevOrders) => [...prevOrders, orderData]);
 
       // Clear the cart after successful order placement
       clearCart();

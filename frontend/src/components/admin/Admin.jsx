@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaBoxOpen, FaHome, FaUsers } from "react-icons/fa";
+import { FaBoxOpen } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { db } from "../firebase/firebase";
 import {
@@ -9,16 +9,17 @@ import {
   addDoc,
   deleteDoc,
   doc,
+  updateDoc,
+  query,
+  where,
 } from "firebase/firestore";
 import { BiSearch } from "react-icons/bi";
 import AcceptedOrders from "./AcceptedOrders";
 import RejectedOrders from "./RejectedOrders";
 import { Puff } from "react-loader-spinner";
-import { useCart } from "../../context/CartContext";
 
 const Admin = () => {
   const navigate = useNavigate();
-  const {setOrderStatus} = useCart()
   const [activeTab, setActiveTab] = useState(() => {
     // Retrieve active tab from localStorage, default to "orders" if not found
     return localStorage.getItem("activeTab") || "orders";
@@ -73,14 +74,15 @@ const Admin = () => {
         orderStatus: "accepted",
         products: [{ ...product }], // Ensure only the selected product is added
       };
-  
+
       // Add the new accepted order with only the selected product
       await addDoc(collection(db, "acceptedOrders"), newOrder);
-      setOrderStatus("accepted")
-  
+
       // Filter out the accepted product from the pending order
-      const updatedProducts = order.products.filter((p) => p.title !== product.title);
-  
+      const updatedProducts = order.products.filter(
+        (p) => p.title !== product.title
+      );
+
       if (updatedProducts.length === 0) {
         // If all products have been accepted, remove the order from pendingProducts
         await deleteDoc(doc(db, "pendingProducts", order.id));
@@ -93,13 +95,29 @@ const Admin = () => {
           )
         );
       }
-  
+
+      //  Update user’s subcollection doc to set status = "accepted"
+      //    We need to query by orderId to find the correct doc(s).
+      if (order.uid) {
+        // Reference the user’s Orders subcollection
+        const userOrdersRef = collection(db, "Users", order.uid, "Orders");
+        const q = query(userOrdersRef, where("orderId", "==", order.orderId));
+        const querySnapshot = await getDocs(q);
+
+        for (const docSnap of querySnapshot.docs) {
+          // Update doc to reflect "accepted"
+          await updateDoc(doc(db, "Users", order.uid, "Orders", docSnap.id), {
+            orderStatus: "accepted",
+          });
+        }
+      }
+
       setAcceptedOrder((prev) => [...prev, newOrder]); // Update accepted orders state
     } catch (error) {
       console.error("Error accepting product:", error);
     }
   };
-  
+
   const handleRejectOrders = async (order, product) => {
     try {
       // Create a new order object containing only the rejected product
@@ -111,14 +129,15 @@ const Admin = () => {
         orderStatus: "rejected",
         products: [{ ...product }], // Ensure only the selected product is added
       };
-  
+
       // Add the new rejected order with only the selected product
       await addDoc(collection(db, "rejectedOrders"), newOrder);
-      setOrderStatus("rejected")
-  
+
       // Filter out the rejected product from the pending order
-      const updatedProducts = order.products.filter((p) => p.title !== product.title);
-  
+      const updatedProducts = order.products.filter(
+        (p) => p.title !== product.title
+      );
+
       if (updatedProducts.length === 0) {
         // If all products have been rejected, remove the order from pendingProducts
         await deleteDoc(doc(db, "pendingProducts", order.id));
@@ -131,13 +150,24 @@ const Admin = () => {
           )
         );
       }
-  
+
+      if (order.uid) {
+        const userOrdersRef = collection(db, "Users", order.uid, "Orders");
+        const q = query(userOrdersRef, where("orderId", "==", order.orderId));
+        const querySnapshot = await getDocs(q);
+
+        for (const docSnap of querySnapshot.docs) {
+          await updateDoc(doc(db, "Users", order.uid, "Orders", docSnap.id), {
+            orderStatus: "rejected",
+          });
+        }
+      }
+
       setRejectedOrders((prev) => [...prev, newOrder]); // Update rejected orders state
     } catch (error) {
       console.error("Error rejecting product:", error);
     }
   };
-  
 
   // Update the active tab and store it in localStorage
   const handleTabChange = (tab) => {
@@ -283,7 +313,12 @@ const Admin = () => {
                                     <p className="font-semibold">
                                       {product.title}
                                     </p>
-                                    <p className="text-sm"><span className="font-semibold">ProductId :</span>  {product.productId}</p>
+                                    <p className="text-sm">
+                                      <span className="font-semibold">
+                                        ProductId :
+                                      </span>{" "}
+                                      {product.productId}
+                                    </p>
                                     <p className="text-gray-700 text-sm">
                                       <span className="font-semibold text-gray-950">
                                         Thickness:{" "}
@@ -302,19 +337,23 @@ const Admin = () => {
                                     </p>
                                   </div>
                                 </div>
-                                
+
                                 <div className="space-x-2">
                                   <button
                                     type="button"
                                     className="bg-green-500 text-sm py-1 text-white font-semibold px-2 rounded-lg"
-                                    onClick={() => handleAcceptOrders(order, product)}
+                                    onClick={() =>
+                                      handleAcceptOrders(order, product)
+                                    }
                                   >
                                     Accept
                                   </button>
                                   <button
                                     type="button"
                                     className="bg-red-500 text-sm py-1 text-white font-semibold px-2 rounded-lg"
-                                    onClick={() => handleRejectOrders(order, product)}
+                                    onClick={() =>
+                                      handleRejectOrders(order, product)
+                                    }
                                   >
                                     Reject
                                   </button>
