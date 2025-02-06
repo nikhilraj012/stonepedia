@@ -6,20 +6,20 @@ const Step1 = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="bg-black text-white flex justify-center h-[90vh] border-t-2">
-      <div className="flex gap-10 mt-20">
-        <div>
+      <div className="max-md:px-5 md:flex gap-10 mt-20">
+        <div className="max-md:space-y-3">
           <p>(Step 1)</p>
           <h1 className="text-4xl font-bold">Discovery</h1>
         </div>
-        <div className="w-[500px]">
-          <div className="flex items-center gap-3">
+        <div className="md:w-[500px] max-md:my-1">
+          <div className="max-md:space-y-2 md:flex items-center gap-3">
             <p className="text-2xl">
               Together, we dive into your world. A brainstorming session where
               your challenges meet our creative thinking
             </p>
-            <span>
+            <div className="max-md:flex justify-center max-md:text-3xl">
               <IoTelescopeOutline size={60} />
-            </span>
+            </div>
           </div>
 
           <div className=" border-y mt-5">

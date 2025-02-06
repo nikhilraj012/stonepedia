@@ -60,12 +60,6 @@ const Blogs = () => {
     },
   ];
 
-  // const handleImageClick = (id) => {
-  //   if (selectedImage !== id) {
-  //     setSelectedImage(id);
-  //   }
-  // };
-
   useEffect(() => {
     const interval = setInterval(() => {
       setSelectedImage((prev) => (prev % blogs.length) + 1);
@@ -79,37 +73,18 @@ const Blogs = () => {
         <h1 className="text-lg font-serif md:text-xl lg:text-2xl font-bold text-[#871B58]">
           Watch Our Latest Blog
         </h1>
-        {/* <button className="flex items-center gap-2 bg-yellow-400 text-white font-semibold px-3 py-1 hover:bg-pink-800">
-          VIEW MORE
-          <span>
-            <ImArrowRight2 />
-          </span>
-        </button> */}
 
         <a
           href="#_"
-          class="relative inline-flex items-center justify-center p-4 px-6 py-1 overflow-hidden font-medium text-[#FBAD30] transition duration-300 ease-out border-2 border-orange-300 rounded-full shadow-md group"
+          className="relative inline-flex items-center justify-center p-4 px-6 py-1 overflow-hidden font-medium text-[#FBAD30] transition duration-300 ease-out border-2 border-orange-300 rounded-full shadow-md group"
         >
-          <span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-orange-300 group-hover:translate-x-0 ease">
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              ></path>
-            </svg>
+          <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-orange-300 group-hover:translate-x-0 ease">
+            <ImArrowRight2 className="w-6 h-6" />
           </span>
-          <span class="absolute flex items-center justify-center w-full h-full text-[#FBAD30] transition-all duration-300 transform group-hover:translate-x-full ease">
+          <span className="absolute flex items-center justify-center w-full h-full text-[#FBAD30] transition-all duration-300 transform group-hover:translate-x-full ease">
             VIEW MORE
           </span>
-          <span class="relative invisible">Button Text</span>
+          <span className="relative invisible">Button Text</span>
         </a>
       </div>
 
@@ -118,21 +93,20 @@ const Blogs = () => {
           {blogs.map((image) => (
             <div
               key={image.id}
-              className={`relative rounded-lg transition-all duration-300 cursor-pointer ${
+              className={`relative rounded-lg transition-all duration-300 cursor-pointer overflow-hidden shadow-lg ${
                 selectedImage === image.id
-                  ? "w-[100px] h-[150px] md:h-[200px] lg:h-[300px] md:w-[240px] lg:w-[300px] xl:w-[400px] flex-shrink-0"
-                  : "w-[24px] h-[150px] md:h-[200px] lg:h-[300px] md:w-[50px] lg:w-[80px] xl:w-[100px] flex-shrink-0"
+                  ? "w-[100px] h-[180px] md:h-[200px] lg:h-[300px] md:w-[240px] lg:w-[300px] xl:w-[400px] flex-shrink-0"
+                  : "w-[24px] h-[180px] md:h-[200px] lg:h-[300px] md:w-[50px] lg:w-[80px] xl:w-[100px] flex-shrink-0"
               }`}
               style={{
                 backgroundImage: `url(${image.imgUrl})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
-              // onClick={() => handleImageClick(image.id)}
             >
               {selectedImage === image.id && (
-                <div className="absolute text-white bg-black/50 rounded-lg bottom-4 w-full p-2">
-                  <h3 className="text-xs lg:text-base font-bold ">
+                <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent p-2 md:p-4 text-white text-center">
+                  <h3 className="text-sm lg:text-lg font-semibold leading-snug">
                     {image.title}
                   </h3>
                 </div>

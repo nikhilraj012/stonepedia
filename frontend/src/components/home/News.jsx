@@ -39,19 +39,18 @@ const News = () => {
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -50 }}
           transition={{ duration: 1 }}
-          className="text-3xl font-bold text-[#871B58]"
+          className="text-xl md:text-3xl font-bold text-[#871B58]"
         >
           Latest News
         </motion.h1>
-        <motion.a
+        <motion.button
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 50 }}
           transition={{ duration: 1 }}
-          href="#_"
-          className="inline-flex items-center px-4 py-2 bg-[#FBAD30] text-white font-semibold rounded-full shadow-md hover:bg-orange-400 transition"
+          className="inline-flex items-center md:px-4 md:py-2 p-2 bg-[#FBAD30] text-white text-sm md:text-base font-semibold rounded-full shadow-md hover:bg-orange-400 transition"
         >
           VIEW MORE <FaArrowRightLong className="ml-2" />
-        </motion.a>
+        </motion.button>
       </div>
 
       <div className="flex flex-col md:flex-row">

@@ -16,7 +16,6 @@ const placeholderTexts = [
 const countryImages = [
   "src/assets/argentina.png",
   "src/assets/canada.png",
-  "src/assets/china.png",
   "src/assets/england 1.10.28 PM.png",
   "src/assets/india.png",
   "src/assets/norway.png",
