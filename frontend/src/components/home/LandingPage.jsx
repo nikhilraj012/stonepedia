@@ -108,12 +108,12 @@ const LandingPage = () => {
     <div className="relative h-screen lg:h-[80vh]">
       {/* Background Image */}
       <img
-        src="src/assets/l1.webp"
+        src="src/assets/l2.webp"
         alt="Background"
         className="h-full absolute inset-0 w-full object-cover"
       />
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-black/100 opacity-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-black/70 opacity-85"></div>
 
       {/* Main Content Container */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full">

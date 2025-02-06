@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 
 const Orders = () => {
-  const { placedOrders } = useCart();
+  const { placedOrders, orderStatus } = useCart();
   const navigate = useNavigate();
 
   return (
@@ -42,7 +42,7 @@ const Orders = () => {
                         </p>
                       </div>
                       <p>
-                        <strong>Status:</strong> {eachOrder.orderStatus}
+                        <strong>Status:</strong> {orderStatus}
                       </p>
                     </div>
 

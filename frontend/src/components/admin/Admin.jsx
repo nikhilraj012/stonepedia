@@ -14,9 +14,11 @@ import { BiSearch } from "react-icons/bi";
 import AcceptedOrders from "./AcceptedOrders";
 import RejectedOrders from "./RejectedOrders";
 import { Puff } from "react-loader-spinner";
+import { useCart } from "../../context/CartContext";
 
 const Admin = () => {
   const navigate = useNavigate();
+  const {setOrderStatus} = useCart()
   const [activeTab, setActiveTab] = useState(() => {
     // Retrieve active tab from localStorage, default to "orders" if not found
     return localStorage.getItem("activeTab") || "orders";
@@ -74,6 +76,7 @@ const Admin = () => {
   
       // Add the new accepted order with only the selected product
       await addDoc(collection(db, "acceptedOrders"), newOrder);
+      setOrderStatus("accepted")
   
       // Filter out the accepted product from the pending order
       const updatedProducts = order.products.filter((p) => p.title !== product.title);
@@ -111,6 +114,7 @@ const Admin = () => {
   
       // Add the new rejected order with only the selected product
       await addDoc(collection(db, "rejectedOrders"), newOrder);
+      setOrderStatus("rejected")
   
       // Filter out the rejected product from the pending order
       const updatedProducts = order.products.filter((p) => p.title !== product.title);
