@@ -108,7 +108,7 @@ const LandingPage = () => {
     <div className="relative h-screen lg:h-[80vh]">
       {/* Background Image */}
       <img
-        src="/stonepedia_img.webp"
+        src="src/assets/l1.webp"
         alt="Background"
         className="h-full absolute inset-0 w-full object-cover"
       />

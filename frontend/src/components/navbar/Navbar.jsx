@@ -114,7 +114,7 @@ const Navbar = () => {
             </ul>
           ) : (
             <ul
-              className={`hidden md:flex items-center space-x-2 lg:space-x-8 font-semibold ${
+              className={`hidden md:flex items-center space-x-2 md:space-x-6 lg:space-x-8 font-semibold ${
                 isScrolled || isNotHome || isHovered
                   ? "text-black"
                   : "text-gray-200"

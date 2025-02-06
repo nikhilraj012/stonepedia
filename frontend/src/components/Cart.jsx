@@ -8,8 +8,13 @@ import { db } from "../components/firebase/firebase";
 import { auth } from "../components/firebase/firebase";
 
 const Cart = () => {
-  const { cartItems, removeFromCart, clearCart, updateCartItemQuantity } =
-    useCart();
+  const {
+    cartItems,
+    removeFromCart,
+    clearCart,
+    updateCartItemQuantity,
+    setPlacedOrders,
+  } = useCart();
   const navigate = useNavigate();
 
   const handleIncrement = (id, currentValue) => {
@@ -27,25 +32,25 @@ const Cart = () => {
       const userDocRef = doc(db, "Users", auth.currentUser.uid);
       const userDocSnap = await getDoc(userDocRef);
       const userData = userDocSnap.data();
-  
+
       // Create a new order object that contains all products in the cart
       const orderData = {
         orderId: Math.floor(Math.random() * 100000),
         orderDate: (() => {
           const now = new Date();
-          const day = String(now.getDate()).padStart(2, '0');
-          const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
+          const day = String(now.getDate()).padStart(2, "0");
+          const month = String(now.getMonth() + 1).padStart(2, "0"); // Months are 0-indexed
           const year = now.getFullYear();
-          const hours = String(now.getHours()).padStart(2, '0');
-          const minutes = String(now.getMinutes()).padStart(2, '0');
-      
+          const hours = String(now.getHours()).padStart(2, "0");
+          const minutes = String(now.getMinutes()).padStart(2, "0");
+
           return `${day}-${month}-${year} ${hours}:${minutes}`;
         })(),
         customername: userData.userName,
         email: auth.currentUser.email,
         orderStatus: "pending",
         products: cartItems.map((eachProduct) => ({
-          productId : eachProduct.id,
+          productId: eachProduct.id,
           imgUrl: eachProduct.imgUrl,
           title: eachProduct.title,
           thickness: eachProduct.thickness,
@@ -53,12 +58,15 @@ const Cart = () => {
           value: eachProduct.value,
         })),
       };
-  
-      console.log("Order Data: ", orderData);
-  
-      // Save the order to the user's 'userOrders' sub-collection
+
+      // console.log("Order Data: ", orderData);
+
+      // Save the order in Firebase under "pendingProducts"
       await addDoc(collection(db, "pendingProducts"), orderData);
-  
+
+      // Store the order data in Cart Provider state for quick access
+      setPlacedOrders(prevOrders => [...prevOrders, orderData]);
+
       // Clear the cart after successful order placement
       clearCart();
       navigate("/checkout");
@@ -66,8 +74,6 @@ const Cart = () => {
       console.error("Error adding document: ", error);
     }
   };
-  
-  
 
   return (
     <div className="py-20">
