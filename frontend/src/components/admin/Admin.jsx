@@ -112,7 +112,7 @@ const Admin = () => {
         }
       }
 
-      setAcceptedOrder((prev) => [...prev, newOrder]); // Update accepted orders state
+      setAcceptedOrder((prev) => [...prev, newOrder]); 
     } catch (error) {
       console.error("Error accepting product:", error);
     }
